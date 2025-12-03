@@ -1,0 +1,37 @@
+<svg width="180" height="180" viewBox="0 0 180 180" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow3">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="180" height="180" rx="40" fill="#0a0a0f"/>
+  
+  <!-- Dumbbell -->
+  <g filter="url(#glow3)">
+    <!-- Left weight -->
+    <rect x="37" y="66" width="19" height="48" rx="4" fill="url(#grad3)"/>
+    <rect x="33" y="61" width="7" height="58" rx="3" fill="url(#grad3)"/>
+    
+    <!-- Bar -->
+    <rect x="56" y="85" width="68" height="10" rx="5" fill="url(#grad3)"/>
+    
+    <!-- Right weight -->
+    <rect x="124" y="66" width="19" height="48" rx="4" fill="url(#grad3)"/>
+    <rect x="140" y="61" width="7" height="58" rx="3" fill="url(#grad3)"/>
+    
+    <!-- Center grip lines -->
+    <line x1="86" y1="83" x2="86" y2="97" stroke="#ffffff" stroke-width="1.5" opacity="0.3"/>
+    <line x1="90" y1="83" x2="90" y2="97" stroke="#ffffff" stroke-width="1.5" opacity="0.3"/>
+    <line x1="94" y1="83" x2="94" y2="97" stroke="#ffffff" stroke-width="1.5" opacity="0.3"/>
+  </g>
+</svg>
