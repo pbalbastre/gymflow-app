@@ -199,6 +199,107 @@ function saveWorkout(e) {
     ActiveWorkoutSession.start(name);
 }
 
+function openEditWorkoutModal(id) {
+    const workout = AppState.workouts.find(w => w.id === id);
+    if (!workout) return;
+
+    document.getElementById('editWorkoutId').value = workout.id;
+    document.getElementById('editWorkoutName').value = workout.name;
+    document.getElementById('editWorkoutNotes').value = workout.notes || '';
+
+    // Format date for datetime-local input (YYYY-MM-DDThh:mm)
+    // Create a date object from the ISO string
+    const date = new Date(workout.date);
+    // Adjust to local timezone for the input value
+    const localDate = new Date(date.getTime() - date.getTimezoneOffset() * 60000);
+    const dateString = localDate.toISOString().slice(0, 16);
+    document.getElementById('editWorkoutDate').value = dateString;
+
+    // Clear and load exercises
+    document.getElementById('editExercisesList').innerHTML = '';
+    currentExerciseCount = 0; // Reset counter to avoid ID collisions
+
+    if (workout.exercises && workout.exercises.length > 0) {
+        workout.exercises.forEach(ex => {
+            // Use the updated addExerciseToWorkout from exercise-selector.js
+            // Arguments: exerciseName, category, images, exerciseType, existingSets, targetContainerId
+            addExerciseToWorkout(
+                ex.name,
+                ex.category,
+                ex.images || [],
+                ex.type || 'strength',
+                ex.sets,
+                'editExercisesList'
+            );
+        });
+    }
+
+    document.getElementById('editWorkoutModal').classList.add('active');
+}
+
+function saveEditedWorkout(e) {
+    e.preventDefault();
+
+    const id = parseInt(document.getElementById('editWorkoutId').value);
+    const name = document.getElementById('editWorkoutName').value;
+    const date = document.getElementById('editWorkoutDate').value;
+    const notes = document.getElementById('editWorkoutNotes').value;
+
+    const workoutIndex = AppState.workouts.findIndex(w => w.id === id);
+    if (workoutIndex === -1) return;
+
+    // Collect exercises from editExercisesList
+    const exercises = [];
+    const categories = new Set();
+
+    const container = document.getElementById('editExercisesList');
+    container.querySelectorAll('.exercise-form').forEach(form => {
+        const exerciseName = form.dataset.exerciseName;
+        const category = form.dataset.category;
+        const type = form.dataset.type;
+        const sets = [];
+
+        form.querySelectorAll('.set-item').forEach(setItem => {
+            if (type === 'cardio') {
+                const time = parseFloat(setItem.querySelector('.set-time').value) || 0;
+                const distance = parseFloat(setItem.querySelector('.set-distance').value) || 0;
+                if (time > 0 || distance > 0) sets.push({ time, distance });
+            } else {
+                const reps = parseInt(setItem.querySelector('.set-reps').value) || 0;
+                const weight = parseFloat(setItem.querySelector('.set-weight').value) || 0;
+                if (reps > 0) sets.push({ reps, weight });
+            }
+        });
+
+        if (sets.length > 0) {
+            exercises.push({
+                name: exerciseName,
+                category: category,
+                type: type,
+                sets: sets
+            });
+            if (category !== 'custom') categories.add(category);
+        }
+    });
+
+    // Update workout
+    const updatedWorkout = {
+        ...AppState.workouts[workoutIndex],
+        name: name,
+        date: new Date(date).toISOString(),
+        notes: notes,
+        exercises: exercises,
+        category: categories.size > 0 ? Array.from(categories)[0] : 'general'
+    };
+
+    AppState.workouts[workoutIndex] = updatedWorkout;
+    Storage.save();
+
+    document.getElementById('editWorkoutModal').classList.remove('active');
+    updateUI();
+    showToast('Entrenamiento actualizado', 'success');
+}
+
 // ==========================================
 // UI RENDERING
 // ==========================================
@@ -273,6 +374,12 @@ function createWorkoutCard(workout) {
                         <span class="workout-duration">⏱️ ${formatTime(workout.duration)}</span>
                     </div>
                 </div>
+                <button class="workout-edit-btn" onclick="openEditWorkoutModal(${workout.id})" title="Editar entrenamiento" style="margin-right: 8px; background: none; border: none; color: var(--text-secondary); cursor: pointer;">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 20px; height: 20px;">
+                        <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+                        <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+                    </svg>
+                </button>
                 <button class="workout-delete-btn" onclick="deleteWorkout(event, ${workout.id})" title="Eliminar entrenamiento">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <polyline points="3 6 5 6 21 6"></polyline>
@@ -699,6 +806,18 @@ function initializeEventListeners() {
     // Note: addExerciseBtn listener is now in exercise-selector.js via initializeExerciseSelectorListeners()
     // document.getElementById('addExerciseBtn').addEventListener('click', addExercise);
     document.getElementById('startWorkoutForm').addEventListener('submit', saveWorkout);
+
+    // Edit Workout Modal
+    document.getElementById('closeEditWorkout').addEventListener('click', () => {
+        document.getElementById('editWorkoutModal').classList.remove('active');
+    });
+    document.getElementById('cancelEditWorkout').addEventListener('click', () => {
+        document.getElementById('editWorkoutModal').classList.remove('active');
+    });
+    document.getElementById('editWorkoutForm').addEventListener('submit', saveEditedWorkout);
+    document.getElementById('addExerciseToEditBtn').addEventListener('click', () => {
+        ExerciseSelector.open('editExercisesList');
+    });
 
     // Active Workout Session
     document.getElementById('addExerciseToActiveBtn').addEventListener('click', () => {

@@ -578,6 +578,55 @@
         </div>
     </div>
 
+    <!-- Edit Workout Modal -->
+    <div class="modal" id="editWorkoutModal">
+        <div class="modal-backdrop"></div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Editar Entrenamiento</h2>
+                <button class="modal-close" id="closeEditWorkout">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="editWorkoutForm">
+                    <input type="hidden" id="editWorkoutId">
+                    <div class="form-group">
+                        <label class="form-label">Nombre del Entrenamiento</label>
+                        <input type="text" class="form-input" id="editWorkoutName" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Fecha</label>
+                        <input type="datetime-local" class="form-input" id="editWorkoutDate" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Ejercicios</label>
+                        <div id="editExercisesList" class="exercises-list">
+                            <!-- Exercises will be added here -->
+                        </div>
+                        <button type="button" class="btn btn-secondary btn-block" id="addExerciseToEditBtn">
+                            + Añadir Ejercicio
+                        </button>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Notas</label>
+                        <textarea class="form-input" id="editWorkoutNotes" rows="3"
+                            placeholder="¿Cómo te sentiste?"></textarea>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" id="cancelEditWorkout">Cancelar</button>
+                <button type="submit" form="editWorkoutForm" class="btn btn-primary">Guardar Cambios</button>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+
     <!-- Calendar Modal -->
     <div class="modal" id="calendarModal">
         <div class="modal-backdrop"></div>

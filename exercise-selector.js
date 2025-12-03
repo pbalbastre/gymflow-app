@@ -10,8 +10,10 @@ const ExerciseSelector = {
         equipment: 'all',
         search: ''
     },
+    targetContainer: 'exercisesList', // Default container
 
-    open() {
+    open(targetContainer = 'exercisesList') {
+        this.targetContainer = targetContainer;
         const modal = document.getElementById('exerciseSelectorModal');
         modal.classList.add('active');
         this.resetFilters();
@@ -122,22 +124,23 @@ const ExerciseSelector = {
 
     selectExercise(exercise) {
         this.close();
-        addExerciseToWorkout(exercise.name, exercise.muscle, exercise.images, exercise.category);
+        addExerciseToWorkout(exercise.name, exercise.muscle, exercise.images, exercise.category, null, this.targetContainer);
     },
 
     selectCustomExercise() {
         this.close();
         const name = prompt('Nombre del ejercicio personalizado:');
         if (name && name.trim()) {
-            addExerciseToWorkout(name.trim(), 'custom');
+            addExerciseToWorkout(name.trim(), 'custom', [], 'strength', null, this.targetContainer);
         }
     }
 };
 
 // Updated: Add exercise to workout with individual sets support
-function addExerciseToWorkout(exerciseName, category = 'custom', images = [], exerciseType = 'strength') {
+function addExerciseToWorkout(exerciseName, category = 'custom', images = [], exerciseType = 'strength', existingSets = null, targetContainerId = 'exercisesList') {
     currentExerciseCount++;
-    const container = document.getElementById('exercisesList');
+    const container = document.getElementById(targetContainerId);
+    if (!container) return; // Safety check
 
     const exerciseForm = document.createElement('div');
     exerciseForm.className = 'exercise-form';
@@ -191,13 +194,21 @@ function addExerciseToWorkout(exerciseName, category = 'custom', images = [], ex
 
     container.appendChild(exerciseForm);
 
-    // Add first set by default
-    addSetToExercise(currentExerciseCount);
+    // Add sets (either existing or default empty one)
+    if (existingSets && existingSets.length > 0) {
+        existingSets.forEach(set => {
+            addSetToExercise(currentExerciseCount, set);
+        });
+    } else {
+        addSetToExercise(currentExerciseCount);
+    }
 }
 
 // Add a set to an exercise
-function addSetToExercise(exerciseId) {
+function addSetToExercise(exerciseId, setData = null) {
     const exerciseForm = document.querySelector(`[data-exercise-id="${exerciseId}"]`);
+    if (!exerciseForm) return;
+
     const setsList = exerciseForm.querySelector(`#setsList${exerciseId}`);
     let setCount = parseInt(exerciseForm.dataset.setCount) || 0;
     setCount++;
@@ -208,16 +219,16 @@ function addSetToExercise(exerciseId) {
 
     if (isCardio) {
         inputsHtml = `
-            <input type="number" class="form-input set-time" placeholder="Min" min="1" required>
+            <input type="number" class="form-input set-time" placeholder="Min" min="1" required value="${setData ? setData.time : ''}">
             <span class="set-separator">min</span>
-            <input type="number" class="form-input set-distance" placeholder="Km" step="0.01" required>
+            <input type="number" class="form-input set-distance" placeholder="Km" step="0.01" required value="${setData ? setData.distance : ''}">
             <span class="set-separator">km</span>
         `;
     } else {
         inputsHtml = `
-            <input type="number" class="form-input set-reps" placeholder="Reps" min="1" required>
+            <input type="number" class="form-input set-reps" placeholder="Reps" min="1" required value="${setData ? setData.reps : ''}">
             <span class="set-separator">×</span>
-            <input type="number" class="form-input set-weight" placeholder="kg" step="0.5" required>
+            <input type="number" class="form-input set-weight" placeholder="kg" step="0.5" required value="${setData ? setData.weight : ''}">
         `;
     }
 
