@@ -17,7 +17,8 @@ const ExercisesDatabase = [
             "After a second pause, slowly return to the starting position as you breathe in.",
             "Repeat the movement for the prescribed amount of repetitions."
         ],
-        "original_muscle": "abdominales"
+        "original_muscle": "abdominales",
+        "category": "fuerza"
     },
     {
         "id": 2,
@@ -36,7 +37,8 @@ const ExercisesDatabase = [
             "Repeat the movement with the left hand. This equals one repetition.",
             "Continue alternating in this manner for the recommended amount of repetitions."
         ],
-        "original_muscle": "bíceps"
+        "original_muscle": "bíceps",
+        "category": "fuerza"
     },
     {
         "id": 3,
@@ -54,7 +56,8 @@ const ExercisesDatabase = [
             "Repeat the movement with the left hand. This equals one repetition.",
             "Continue alternating in this manner for the recommended amount of repetitions."
         ],
-        "original_muscle": "bíceps"
+        "original_muscle": "bíceps",
+        "category": "fuerza"
     },
     {
         "id": 4,
@@ -72,7 +75,8 @@ const ExercisesDatabase = [
             "On the next repetition, raise the weights laterally, raising them out to your side to about shoulder height.",
             "Return the weights to the starting position and continue alternating to the front and side."
         ],
-        "original_muscle": "hombros"
+        "original_muscle": "hombros",
+        "category": "fuerza"
     },
     {
         "id": 5,
@@ -90,7 +94,8 @@ const ExercisesDatabase = [
             "After a second pause at the top, begin to lower the dumbbells to the original position by rotating the palms of your hands towards you. Tip: The left arm will be rotated in a counter clockwise manner while the right one will be rotated clockwise. Breathe in as you perform this portion of the movement.",
             "Repeat for the recommended amount of repetitions."
         ],
-        "original_muscle": "hombros"
+        "original_muscle": "hombros",
+        "category": "fuerza"
     },
     {
         "id": 6,
@@ -106,7 +111,8 @@ const ExercisesDatabase = [
             "Now move the dumbbells by creating a semi-circle as you displace them from the initial position to over the head. All of the movement should happen with the arms parallel to the floor at all times. Breathe in as you perform this portion of the movement.",
             "Reverse the movement to return the weight to the starting position as you exhale."
         ],
-        "original_muscle": "pecho"
+        "original_muscle": "pecho",
+        "category": "fuerza"
     },
     {
         "id": 7,
@@ -125,7 +131,8 @@ const ExercisesDatabase = [
             "At that point, bring the dumbbell back to the starting position using the arc through which the weight was lowered and exhale as you perform this movement.",
             "Hold the weight on the initial position for a second and repeat the motion for the prescribed number of repetitions."
         ],
-        "original_muscle": "pecho"
+        "original_muscle": "pecho",
+        "category": "fuerza"
     },
     {
         "id": 8,
@@ -143,7 +150,8 @@ const ExercisesDatabase = [
             "After a one second contraction at the top, slowly lower the dumbbells back to the starting position.",
             "Repeat the recommended amount of repetitions."
         ],
-        "original_muscle": "hombros"
+        "original_muscle": "hombros",
+        "category": "fuerza"
     },
     {
         "id": 9,
@@ -160,7 +168,8 @@ const ExercisesDatabase = [
             "Slowly lower the weight again to the starting position as you inhale.",
             "Repeat for the recommended amount of repetitions."
         ],
-        "original_muscle": "espalda media"
+        "original_muscle": "espalda media",
+        "category": "fuerza"
     },
     {
         "id": 10,
@@ -177,7 +186,8 @@ const ExercisesDatabase = [
             "Slowly lower the weight again to the starting position as you inhale.",
             "Repeat for the recommended amount of repetitions."
         ],
-        "original_muscle": "espalda media"
+        "original_muscle": "espalda media",
+        "category": "fuerza"
     },
     {
         "id": 11,
@@ -192,7 +202,8 @@ const ExercisesDatabase = [
             "To begin, seat yourself on the bike and adjust the seat to your height.",
             "Select the desired option from the menu. You may have to start pedaling to turn it on. You can use the manual setting, or you can select a program to use. Typically, you can enter your age and weight to estimate the amount of calories burned during exercise. The level of resistance can be changed throughout the workout. The handles can be used to monitor your heart rate to help you stay at an appropriate intensity."
         ],
-        "original_muscle": "cuádriceps"
+        "original_muscle": "cuádriceps",
+        "category": "cardio"
     },
     {
         "id": 12,
@@ -210,7 +221,8 @@ const ExercisesDatabase = [
             "Return back to the starting position slowly as you inhale until your chest muscles are fully stretched.",
             "Repeat for the recommended amount of repetitions."
         ],
-        "original_muscle": "pecho"
+        "original_muscle": "pecho",
+        "category": "fuerza"
     },
     {
         "id": 13,
@@ -227,7 +239,8 @@ const ExercisesDatabase = [
             "Slowly return to the starting position as you inhale.",
             "Repeat for the recommended amount of repetitions."
         ],
-        "original_muscle": "trapecios"
+        "original_muscle": "trapecios",
+        "category": "fuerza"
     },
     {
         "id": 14,
@@ -244,7 +257,8 @@ const ExercisesDatabase = [
             "Straighten the legs by extending the knees, just barely lifting the weight from the stack. Your ankle should be fully flexed, toes pointing up. Execute the movement by pressing downward through the balls of your feet as far as possible.",
             "After a brief pause, reverse the motion and repeat."
         ],
-        "original_muscle": "pantorrillas"
+        "original_muscle": "pantorrillas",
+        "category": "fuerza"
     },
     {
         "id": 15,
@@ -262,7 +276,8 @@ const ExercisesDatabase = [
             "Go back slowly to the starting position as you breathe in by lowering your heels as you bend the ankles until calves are stretched.",
             "Repeat for the recommended amount of repetitions."
         ],
-        "original_muscle": "pantorrillas"
+        "original_muscle": "pantorrillas",
+        "category": "fuerza"
     },
     {
         "id": 16,
@@ -280,7 +295,8 @@ const ExercisesDatabase = [
             "Now inhale as you roll the dumbbell slightly forward as you come down to get a better stretch.",
             "Repeat for the recommended amount of repetitions."
         ],
-        "original_muscle": "pantorrillas"
+        "original_muscle": "pantorrillas",
+        "category": "fuerza"
     },
     {
         "id": 17,
@@ -299,7 +315,8 @@ const ExercisesDatabase = [
             "Begin to raise the bar as you exhale by pushing the floor with the heels of your feet, extending the knees and returning to the starting position.",
             "Repeat for the recommended amount of repetitions."
         ],
-        "original_muscle": "cuádriceps"
+        "original_muscle": "cuádriceps",
+        "category": "fuerza"
     },
     {
         "id": 18,
@@ -317,7 +334,8 @@ const ExercisesDatabase = [
             "Initiate the movement by lowering the dumbbell to your chest.",
             "Return to the starting position by extending the elbows."
         ],
-        "original_muscle": "tríceps"
+        "original_muscle": "tríceps",
+        "category": "fuerza"
     },
     {
         "id": 19,
@@ -335,7 +353,8 @@ const ExercisesDatabase = [
             "Slowly begin to bring the dumbbells back to starting position as your breathe in. Caution: Avoid swinging motions at any time.",
             "Repeat for the recommended amount of repetitions. Then repeat the movement with the left arm."
         ],
-        "original_muscle": "bíceps"
+        "original_muscle": "bíceps",
+        "category": "fuerza"
     },
     {
         "id": 20,
@@ -352,7 +371,8 @@ const ExercisesDatabase = [
             "Slowly lower the dumbbell along the same path as you inhale and then repeat the same movement for the left arm.",
             "Continue alternating in this fashion until the recommended amount of repetitions is performed for each arm."
         ],
-        "original_muscle": "bíceps"
+        "original_muscle": "bíceps",
+        "category": "fuerza"
     },
     {
         "id": 21,
@@ -370,7 +390,8 @@ const ExercisesDatabase = [
             "Return to the starting position as you breathe in by reversing the steps.",
             "Repeat for the recommended amount of repetitions."
         ],
-        "original_muscle": "hombros"
+        "original_muscle": "hombros",
+        "category": "fuerza"
     },
     {
         "id": 22,
@@ -389,7 +410,8 @@ const ExercisesDatabase = [
             "As you breathe out, push the dumbbells up using your pectoral muscles. Lock your arms in the contracted position, squeeze your chest, hold for a second and then start coming down slowly. Tip: It should take at least twice as long to go down than to come up..",
             "Repeat the movement for the prescribed amount of repetitions of your training program."
         ],
-        "original_muscle": "pecho"
+        "original_muscle": "pecho",
+        "category": "fuerza"
     },
     {
         "id": 23,
@@ -407,7 +429,8 @@ const ExercisesDatabase = [
             "Return your arms back to the starting position as you squeeze your chest muscles and breathe out. Tip: Make sure to use the same arc of motion used to lower the weights.",
             "Hold for a second at the contracted position and repeat the movement for the prescribed amount of repetitions."
         ],
-        "original_muscle": "pecho"
+        "original_muscle": "pecho",
+        "category": "fuerza"
     },
     {
         "id": 24,
@@ -425,7 +448,8 @@ const ExercisesDatabase = [
             "Lift the dumbbells back to the starting position by contracting the triceps and exhaling.",
             "Repeat for the recommended amount of repetitions."
         ],
-        "original_muscle": "tríceps"
+        "original_muscle": "tríceps",
+        "category": "fuerza"
     },
     {
         "id": 25,
@@ -443,7 +467,8 @@ const ExercisesDatabase = [
             "Repeat the movement for the prescribed amount of repetitions.",
             "When the set is complete, lock the bar back in the rack."
         ],
-        "original_muscle": "pecho"
+        "original_muscle": "pecho",
+        "category": "fuerza"
     },
     {
         "id": 26,
@@ -461,7 +486,8 @@ const ExercisesDatabase = [
             "Now slowly let your arms come back up to the starting position as you inhale.",
             "Repeat for the recommended amount of repetitions."
         ],
-        "original_muscle": "tríceps"
+        "original_muscle": "tríceps",
+        "category": "fuerza"
     },
     {
         "id": 27,
@@ -479,7 +505,8 @@ const ExercisesDatabase = [
             "Repeat the movement with the left hand. This equals one repetition.",
             "Continue alternating in this manner for the recommended amount of repetitions."
         ],
-        "original_muscle": "bíceps"
+        "original_muscle": "bíceps",
+        "category": "fuerza"
     },
     {
         "id": 28,
@@ -497,7 +524,8 @@ const ExercisesDatabase = [
             "Then, as you breathe out, use your chest to push the dumbbells up. Lock your arms at the top of the lift and squeeze your chest, hold for a second and then begin coming down slowly. Tip: Ideally, lowering the weight should take about twice as long as raising it.",
             "Repeat the movement for the prescribed amount of repetitions of your training program."
         ],
-        "original_muscle": "pecho"
+        "original_muscle": "pecho",
+        "category": "fuerza"
     },
     {
         "id": 29,
@@ -514,7 +542,8 @@ const ExercisesDatabase = [
             "Begin the movement by flexing the elbow, lowering the upper arms to the side. Descend until the dumbbells are to your torso.",
             "Pause, then extend the elbow and return to the starting position."
         ],
-        "original_muscle": "pecho"
+        "original_muscle": "pecho",
+        "category": "fuerza"
     },
     {
         "id": 30,
@@ -531,7 +560,8 @@ const ExercisesDatabase = [
             "Then, inhale and slowly begin to lower the dumbbells back to the starting position.",
             "Repeat for the recommended amount of repetitions."
         ],
-        "original_muscle": "bíceps"
+        "original_muscle": "bíceps",
+        "category": "fuerza"
     },
     {
         "id": 31,
@@ -549,7 +579,8 @@ const ExercisesDatabase = [
             "After full extension, rebend the hips and knees to receive the weight in a squat position. Allow the arms to bend, guiding the dumbbells to your shoulders.",
             "Upon receiving the weight in the squat position, extend the hips and knees to finish in a standing position with the weights on your shoulders."
         ],
-        "original_muscle": "isquiotibiales"
+        "original_muscle": "isquiotibiales",
+        "category": "fuerza"
     },
     {
         "id": 32,
@@ -565,7 +596,8 @@ const ExercisesDatabase = [
             "Lower the weights until your upper arm comes in contact with the floor. You can tuck your elbows to emphasize triceps size and strength, or to focus on your chest angle your arms to the side.",
             "Pause at the bottom, and then bring the weight together at the top by extending through the elbows."
         ],
-        "original_muscle": "tríceps"
+        "original_muscle": "tríceps",
+        "category": "levantamiento de potencia"
     },
     {
         "id": 33,
@@ -583,7 +615,8 @@ const ExercisesDatabase = [
             "Return your arms back to the starting position as you squeeze your chest muscles and breathe out. Tip: Make sure to use the same arc of motion used to lower the weights.",
             "Hold for a second at the contracted position and repeat the movement for the prescribed amount of repetitions."
         ],
-        "original_muscle": "pecho"
+        "original_muscle": "pecho",
+        "category": "fuerza"
     },
     {
         "id": 34,
@@ -600,7 +633,8 @@ const ExercisesDatabase = [
             "Retract the shoulder blades and flex the elbows to row the dumbbells to your side.",
             "Pause at the top of the motion, and then return to the starting position."
         ],
-        "original_muscle": "espalda media"
+        "original_muscle": "espalda media",
+        "category": "fuerza"
     },
     {
         "id": 35,
@@ -618,7 +652,8 @@ const ExercisesDatabase = [
             "Bring back the dumbbells to the starting position as you breathe in.",
             "Repeat for the recommended amount of repetitions."
         ],
-        "original_muscle": "hombros"
+        "original_muscle": "hombros",
+        "category": "fuerza"
     },
     {
         "id": 36,
@@ -635,7 +670,8 @@ const ExercisesDatabase = [
             "Using mainly the heel of your foot, push up and go back to the starting position as you exhale.",
             "Repeat the movement for the recommended amount of repetitions and then perform with the left leg."
         ],
-        "original_muscle": "cuádriceps"
+        "original_muscle": "cuádriceps",
+        "category": "fuerza"
     },
     {
         "id": 37,
@@ -653,7 +689,8 @@ const ExercisesDatabase = [
             "Slowly lower the dumbbell to the starting position as you inhale.",
             "Repeat for the recommended amount of repetitions."
         ],
-        "original_muscle": "hombros"
+        "original_muscle": "hombros",
+        "category": "fuerza"
     },
     {
         "id": 38,
@@ -672,7 +709,8 @@ const ExercisesDatabase = [
             "As you breathe in, slowly go back to the starting position.",
             "Repeat for the recommended amount of repetitions."
         ],
-        "original_muscle": "antebrazos"
+        "original_muscle": "antebrazos",
+        "category": "fuerza"
     },
     {
         "id": 39,
@@ -690,7 +728,8 @@ const ExercisesDatabase = [
             "Slowly lower the dumbbells to the starting position as you inhale.",
             "Repeat for the recommended amount of repetitions and then switch to the other arm."
         ],
-        "original_muscle": "hombros"
+        "original_muscle": "hombros",
+        "category": "fuerza"
     },
     {
         "id": 40,
@@ -709,7 +748,8 @@ const ExercisesDatabase = [
             "As you breathe in, slowly go back to the starting position.",
             "Repeat for the recommended amount of repetitions and then switch to the other arm."
         ],
-        "original_muscle": "antebrazos"
+        "original_muscle": "antebrazos",
+        "category": "fuerza"
     },
     {
         "id": 41,
@@ -728,7 +768,8 @@ const ExercisesDatabase = [
             "After a second pause, slowly come down back to the starting position as you inhale.",
             "Repeat for the recommended amount of repetitions and then switch arms."
         ],
-        "original_muscle": "hombros"
+        "original_muscle": "hombros",
+        "category": "fuerza"
     },
     {
         "id": 42,
@@ -747,7 +788,8 @@ const ExercisesDatabase = [
             "Return to the starting position by flexing your triceps as you breathe out. Tip: It is imperative that only the forearm moves. The upper arm should remain at all times stationary next to your head.",
             "Repeat for the recommended amount of repetitions and switch arms."
         ],
-        "original_muscle": "tríceps"
+        "original_muscle": "tríceps",
+        "category": "fuerza"
     },
     {
         "id": 43,
@@ -765,7 +807,8 @@ const ExercisesDatabase = [
             "Lower the dumbbell back down slowly to the starting position. Inhale as you perform this portion of the movement.",
             "Repeat for the recommended amount of repetitions and switch arms."
         ],
-        "original_muscle": "hombros"
+        "original_muscle": "hombros",
+        "category": "fuerza"
     },
     {
         "id": 44,
@@ -784,7 +827,8 @@ const ExercisesDatabase = [
             "Lower the dumbbells until your arms are fully extended.",
             "Repeat for the recommended amount of times."
         ],
-        "original_muscle": "bíceps"
+        "original_muscle": "bíceps",
+        "category": "fuerza"
     },
     {
         "id": 45,
@@ -801,7 +845,8 @@ const ExercisesDatabase = [
             "Lower the dumbbells back down slowly to the starting position. Inhale as you perform this portion of the movement.",
             "Repeat for the recommended amount of repetitions."
         ],
-        "original_muscle": "hombros"
+        "original_muscle": "hombros",
+        "category": "fuerza"
     },
     {
         "id": 46,
@@ -818,7 +863,8 @@ const ExercisesDatabase = [
             "Push up and go back to the starting position as you exhale. Tip: Use the ball of your feet to push in order to accentuate the quadriceps. To focus on the glutes, press with your heels.",
             "Now repeat with the opposite leg."
         ],
-        "original_muscle": "cuádriceps"
+        "original_muscle": "cuádriceps",
+        "category": "fuerza"
     },
     {
         "id": 47,
@@ -834,7 +880,8 @@ const ExercisesDatabase = [
             "Begin the movement raising your arms out in front of you, about 30 degrees off center. Your arms should be fully extended as you perform the movement.",
             "Continue until your arms are parallel to the ground, and then return to the starting position."
         ],
-        "original_muscle": "hombros"
+        "original_muscle": "hombros",
+        "category": "fuerza"
     },
     {
         "id": 48,
@@ -851,7 +898,8 @@ const ExercisesDatabase = [
             "Land on the box with both feet, absorbing the impact by allowing the hips and knees to bend.",
             "Step down and return to the starting position."
         ],
-        "original_muscle": "cuádriceps"
+        "original_muscle": "cuádriceps",
+        "category": "pliometría"
     },
     {
         "id": 49,
@@ -870,7 +918,8 @@ const ExercisesDatabase = [
             "Slowly return to the starting position, stretching as far down as possible.",
             "Repeat for your prescribed number of repetitions and then repeat with the right leg."
         ],
-        "original_muscle": "pantorrillas"
+        "original_muscle": "pantorrillas",
+        "category": "fuerza"
     },
     {
         "id": 50,
@@ -889,7 +938,8 @@ const ExercisesDatabase = [
             "Then, after a brief pause at the top contracted position, slowly lower the weights back down to the starting position while inhaling.",
             "Repeat for the recommended amount of repetitions."
         ],
-        "original_muscle": "hombros"
+        "original_muscle": "hombros",
+        "category": "fuerza"
     },
     {
         "id": 51,
@@ -906,7 +956,8 @@ const ExercisesDatabase = [
             "Lower the dumbbells back to the original position.",
             "Repeat for the recommended amount of repetitions."
         ],
-        "original_muscle": "trapecios"
+        "original_muscle": "trapecios",
+        "category": "fuerza"
     },
     {
         "id": 52,
@@ -923,7 +974,8 @@ const ExercisesDatabase = [
             "Now repeat the movement but bending to the left instead. Hold for a second and come back to the starting position.",
             "Repeat for the recommended amount of repetitions and then change hands."
         ],
-        "original_muscle": "abdominales"
+        "original_muscle": "abdominales",
+        "category": "fuerza"
     },
     {
         "id": 53,
@@ -941,7 +993,8 @@ const ExercisesDatabase = [
             "Begin to raise your torso as you exhale by pushing the floor with the heel of your foot mainly as you straighten the legs again and go back to the starting position.",
             "Repeat for the recommended amount of repetitions."
         ],
-        "original_muscle": "cuádriceps"
+        "original_muscle": "cuádriceps",
+        "category": "fuerza"
     },
     {
         "id": 54,
@@ -959,7 +1012,8 @@ const ExercisesDatabase = [
             "Begin to raise the bar as you exhale by pushing the floor with the heel of your foot mainly as you straighten the legs again and go back to the starting position.",
             "Repeat for the recommended amount of repetitions."
         ],
-        "original_muscle": "cuádriceps"
+        "original_muscle": "cuádriceps",
+        "category": "fuerza"
     },
     {
         "id": 55,
@@ -976,7 +1030,8 @@ const ExercisesDatabase = [
             "Step down with the left leg by flexing the hip and knee of the right leg as you inhale. Return to the original standing position by placing the right foot of to next to the left foot on the initial position.",
             "Repeat with the right leg for the recommended amount of repetitions and then perform with the left leg."
         ],
-        "original_muscle": "cuádriceps"
+        "original_muscle": "cuádriceps",
+        "category": "fuerza"
     },
     {
         "id": 56,
@@ -993,7 +1048,8 @@ const ExercisesDatabase = [
             "Now, inhale and slowly lower the dumbbells until they are near your ears. Be sure to keep your upper arms stationary and your elbows tucked in.",
             "Then, exhale and use your triceps to return the weight to the starting position."
         ],
-        "original_muscle": "tríceps"
+        "original_muscle": "tríceps",
+        "category": "fuerza"
     },
     {
         "id": 57,
@@ -1008,7 +1064,8 @@ const ExercisesDatabase = [
             "To begin, step onto the elliptical and select the desired option from the menu. Most ellipticals have a manual setting, or you can select a program to run. Typically, you can enter your age and weight to estimate the amount of calories burned during exercise. Elevation can be adjusted to change the intensity of the workout.",
             "The handles can be used to monitor your heart rate to help you stay at an appropriate intensity."
         ],
-        "original_muscle": "cuádriceps"
+        "original_muscle": "cuádriceps",
+        "category": "cardio"
     },
     {
         "id": 58,
@@ -1027,7 +1084,8 @@ const ExercisesDatabase = [
             "As you breathe in, slowly go back to the starting position.",
             "Repeat for the recommended amount of repetitions and then switch to the other arm."
         ],
-        "original_muscle": "hombros"
+        "original_muscle": "hombros",
+        "category": "fuerza"
     },
     {
         "id": 59,
@@ -1046,7 +1104,8 @@ const ExercisesDatabase = [
             "As you inhale, slowly go back to the starting position.",
             "Repeat for the recommended amount of repetitions."
         ],
-        "original_muscle": "bíceps"
+        "original_muscle": "bíceps",
+        "category": "fuerza"
     },
     {
         "id": 60,
@@ -1063,7 +1122,8 @@ const ExercisesDatabase = [
             "Now lower the dumbbell back down slowly to the starting position as you simultaneously lift the right dumbbell.",
             "Continue alternating in this fashion until all of the recommended amount of repetitions have been performed for each arm."
         ],
-        "original_muscle": "hombros"
+        "original_muscle": "hombros",
+        "category": "fuerza"
     },
     {
         "id": 61,
@@ -1081,7 +1141,8 @@ const ExercisesDatabase = [
             "Lower the arms back to the starting position as you inhale.",
             "Repeat for the recommended amount of repetitions."
         ],
-        "original_muscle": "hombros"
+        "original_muscle": "hombros",
+        "category": "fuerza"
     },
     {
         "id": 62,
@@ -1098,7 +1159,8 @@ const ExercisesDatabase = [
             "As you inhale, lower the dumbbells back down slowly to the starting position.",
             "Repeat for the recommended amount of repetitions."
         ],
-        "original_muscle": "hombros"
+        "original_muscle": "hombros",
+        "category": "fuerza"
     },
     {
         "id": 63,
@@ -1114,7 +1176,8 @@ const ExercisesDatabase = [
             "Start from the bottom of the movement. Keep your back arched as you begin the movement by flexing the knees. Drive your toes into the foot plate as you do so. Keep your upper body straight, and continue until your body is upright.",
             "Return to the starting position, keeping your descent under control."
         ],
-        "original_muscle": "isquiotibiales"
+        "original_muscle": "isquiotibiales",
+        "category": "levantamiento de potencia"
     },
     {
         "id": 64,
@@ -1134,7 +1197,8 @@ const ExercisesDatabase = [
             "Begin to raise the unit as you exhale by pushing the floor with mainly with the heel of your foot as you straighten the legs again and go back to the starting position.",
             "Repeat for the recommended amount of repetitions."
         ],
-        "original_muscle": "cuádriceps"
+        "original_muscle": "cuádriceps",
+        "category": "fuerza"
     },
     {
         "id": 65,
@@ -1152,7 +1216,8 @@ const ExercisesDatabase = [
             "After the brief pause, inhale and slowly begin the lower the dumbbells back down to the starting position.",
             "Repeat for the recommended amount of repetitions."
         ],
-        "original_muscle": "bíceps"
+        "original_muscle": "bíceps",
+        "category": "fuerza"
     },
     {
         "id": 66,
@@ -1172,7 +1237,8 @@ const ExercisesDatabase = [
             "Repeat the movement for the prescribed amount of repetitions.",
             "When you are done, place the dumbbells back in your thighs and then on the floor. This is the safest manner to dispose of the dumbbells."
         ],
-        "original_muscle": "pecho"
+        "original_muscle": "pecho",
+        "category": "fuerza"
     },
     {
         "id": 67,
@@ -1192,7 +1258,8 @@ const ExercisesDatabase = [
             "Repeat the movement for the prescribed amount of repetitions.",
             "When you are done, place the dumbbells back in your thighs and then on the floor. This is the safest manner to dispose of the dumbbells."
         ],
-        "original_muscle": "pecho"
+        "original_muscle": "pecho",
+        "category": "fuerza"
     },
     {
         "id": 68,
@@ -1209,7 +1276,8 @@ const ExercisesDatabase = [
             "Slowly begin to bring the dumbbells back to starting position as your breathe in.",
             "Repeat for the recommended amount of repetitions."
         ],
-        "original_muscle": "bíceps"
+        "original_muscle": "bíceps",
+        "category": "fuerza"
     },
     {
         "id": 69,
@@ -1228,7 +1296,8 @@ const ExercisesDatabase = [
             "As you exhale start to bring the dumbbells back up to the starting position by reversing the motion and rotating the hands so that the pinky fingers are next to each other again. Tip: Keep in mind that the movement will only happen at the shoulder joint and at the wrist. There is no motion that happens at the elbow joint.",
             "Repeat for the recommended amount of repetitions."
         ],
-        "original_muscle": "pecho"
+        "original_muscle": "pecho",
+        "category": "fuerza"
     },
     {
         "id": 70,
@@ -1247,7 +1316,8 @@ const ExercisesDatabase = [
             "As you exhale start to bring the dumbbells back up to the starting position by reversing the motion and rotating the hands so that the pinky fingers are next to each other again. Tip: Keep in mind that the movement will only happen at the shoulder joint and at the wrist. There is no motion that happens at the elbow joint.",
             "Repeat for the recommended amount of repetitions."
         ],
-        "original_muscle": "pecho"
+        "original_muscle": "pecho",
+        "category": "fuerza"
     },
     {
         "id": 71,
@@ -1267,7 +1337,8 @@ const ExercisesDatabase = [
             "Repeat the movement for the prescribed amount of repetitions.",
             "When you are done, place the dumbbells back on your thighs and then on the floor. This is the safest manner to release the dumbbells."
         ],
-        "original_muscle": "pecho"
+        "original_muscle": "pecho",
+        "category": "fuerza"
     },
     {
         "id": 72,
@@ -1283,7 +1354,8 @@ const ExercisesDatabase = [
             "Initiate the movement by flexing at the elbow, attempting to keep the upper arm stationary.",
             "Continue to the top of the movement and pause, then slowly return to the start position."
         ],
-        "original_muscle": "bíceps"
+        "original_muscle": "bíceps",
+        "category": "fuerza"
     },
     {
         "id": 73,
@@ -1301,7 +1373,8 @@ const ExercisesDatabase = [
             "After a second contraction at the top of the movement, start to inhale and slowly lower the weights back to the starting position using the same path used to bring them up.",
             "Repeat for the recommended amount of repetitions."
         ],
-        "original_muscle": "bíceps"
+        "original_muscle": "bíceps",
+        "category": "fuerza"
     },
     {
         "id": 74,
@@ -1313,7 +1386,8 @@ const ExercisesDatabase = [
             "images/exercises/Iron_Cross/1.jpg"
         ],
         "instructions": [],
-        "original_muscle": "hombros"
+        "original_muscle": "hombros",
+        "category": "fuerza"
     },
     {
         "id": 75,
@@ -1328,7 +1402,8 @@ const ExercisesDatabase = [
             "To begin, step onto the treadmill and select the desired option from the menu. Most treadmills have a manual setting, or you can select a program to run. Typically, you can enter your age and weight to estimate the amount of calories burned during exercise. Elevation can be adjusted to change the intensity of the workout.",
             "Treadmills offer convenience, cardiovascular benefits, and usually have less impact than jogging outside. A 150 lb person will burn almost 250 calories jogging for 30 minutes, compared to more than 450 calories running. Maintain proper posture as you jog, and only hold onto the handles when necessary, such as when dismounting or checking your heart rate."
         ],
-        "original_muscle": "cuádriceps"
+        "original_muscle": "cuádriceps",
+        "category": "cardio"
     },
     {
         "id": 76,
@@ -1345,7 +1420,8 @@ const ExercisesDatabase = [
             "Slowly lower the weight back to the original position as you inhale, ensuring that you do not go past the 90-degree angle limit.",
             "Repeat for the recommended amount of times."
         ],
-        "original_muscle": "cuádriceps"
+        "original_muscle": "cuádriceps",
+        "category": "fuerza"
     },
     {
         "id": 77,
@@ -1363,7 +1439,8 @@ const ExercisesDatabase = [
             "Pushing mainly with the heels of your feet and using the quadriceps go back to the starting position as you exhale.",
             "Repeat for the recommended amount of repetitions and ensure to lock the safety pins properly once you are done. You do not want that platform falling on you fully loaded."
         ],
-        "original_muscle": "cuádriceps"
+        "original_muscle": "cuádriceps",
+        "category": "fuerza"
     },
     {
         "id": 78,
@@ -1380,7 +1457,8 @@ const ExercisesDatabase = [
             "Press the handles forward by extending through the elbow.",
             "After a brief pause at the top, return the weight just above the start position, keeping tension on the muscles by not returning the weight to the stops until the set is complete."
         ],
-        "original_muscle": "pecho"
+        "original_muscle": "pecho",
+        "category": "fuerza"
     },
     {
         "id": 79,
@@ -1395,7 +1473,8 @@ const ExercisesDatabase = [
             "Load the pins to an appropriate weight. Position yourself directly between the handles. Grasp the bottom handles with a comfortable grip, and then lower your hips as you take a breath. Look forward with your head and keep your chest up. This will be your starting position.",
             "Return the weight to the starting position."
         ],
-        "original_muscle": "cuádriceps"
+        "original_muscle": "cuádriceps",
+        "category": "fuerza"
     },
     {
         "id": 80,
@@ -1411,7 +1490,8 @@ const ExercisesDatabase = [
             "Press the handles forward by extending through the elbow.",
             "After a brief pause at the top, return the weight just above the start position, keeping tension on the muscles by not returning the weight to the stops until the set is complete."
         ],
-        "original_muscle": "pecho"
+        "original_muscle": "pecho",
+        "category": "fuerza"
     },
     {
         "id": 81,
@@ -1428,7 +1508,8 @@ const ExercisesDatabase = [
             "Pause at the bottom of the motion, and then slowly return the handles to the starting position.",
             "For multiple repetitions, avoid completely returning the weight to the stops to keep tension on the muscles being worked."
         ],
-        "original_muscle": "espalda media"
+        "original_muscle": "espalda media",
+        "category": "fuerza"
     },
     {
         "id": 82,
@@ -1444,7 +1525,8 @@ const ExercisesDatabase = [
             "Press the handles forward by extending through the elbow.",
             "After a brief pause at the top, return the weight just above the start position, keeping tension on the muscles by not returning the weight to the stops until the set is complete."
         ],
-        "original_muscle": "pecho"
+        "original_muscle": "pecho",
+        "category": "fuerza"
     },
     {
         "id": 83,
@@ -1460,7 +1542,8 @@ const ExercisesDatabase = [
             "Pull the handles towards your torso, retracting your shoulder blades as you flex the elbow.",
             "Pause at the bottom of the motion, and then slowly return the handles to the starting position. For multiple repetitions, avoid completely returning the weight to the stops to keep tension on the muscles being worked."
         ],
-        "original_muscle": "dorsales"
+        "original_muscle": "dorsales",
+        "category": "fuerza"
     },
     {
         "id": 84,
@@ -1476,7 +1559,8 @@ const ExercisesDatabase = [
             "Press the handles upward by extending through the elbow.",
             "After a brief pause at the top, return the weight to just above the start position, keeping tension on the muscles by not returning the weight to the stops until the set is complete."
         ],
-        "original_muscle": "hombros"
+        "original_muscle": "hombros",
+        "category": "fuerza"
     },
     {
         "id": 85,
@@ -1494,7 +1578,8 @@ const ExercisesDatabase = [
             "Raise the weight by shrugging the shoulders towards your ears, moving straight up and down.",
             "Pause at the top of the motion, and then return the weight to the starting position."
         ],
-        "original_muscle": "trapecios"
+        "original_muscle": "trapecios",
+        "category": "fuerza"
     },
     {
         "id": 86,
@@ -1511,7 +1596,8 @@ const ExercisesDatabase = [
             "At the bottom of the descent, immediately reverse direction. Explosively drive through the heel of your front foot with light pressure from your back foot. Jump up and reverse the position of your legs.",
             "Repeat for the recommended amount of repetitions."
         ],
-        "original_muscle": "cuádriceps"
+        "original_muscle": "cuádriceps",
+        "category": "fuerza"
     },
     {
         "id": 87,
@@ -1528,7 +1614,8 @@ const ExercisesDatabase = [
             "At that point, while keeping the elbows in and the upper arms stationary, use the triceps to bring the weight back up to the starting position as you breathe out.",
             "Repeat for the recommended amount of repetitions."
         ],
-        "original_muscle": "tríceps"
+        "original_muscle": "tríceps",
+        "category": "fuerza"
     },
     {
         "id": 88,
@@ -1545,7 +1632,8 @@ const ExercisesDatabase = [
             "As you exhale, curl your legs up as far as possible without lifting the upper legs from the pad. Once you hit the fully contracted position, hold it for a second.",
             "As you inhale, bring the legs back to the initial position. Repeat for the recommended amount of repetitions."
         ],
-        "original_muscle": "isquiotibiales"
+        "original_muscle": "isquiotibiales",
+        "category": "fuerza"
     },
     {
         "id": 89,
@@ -1564,7 +1652,8 @@ const ExercisesDatabase = [
             "Slowly squat down as you inhale but instead of going all the way down to the starting position, just stop once your thighs are parallel to the platform. The angle between your hamstrings and calves should be a 90-degree angle.",
             "Repeat for the recommended amount of repetitions."
         ],
-        "original_muscle": "cuádriceps"
+        "original_muscle": "cuádriceps",
+        "category": "fuerza"
     },
     {
         "id": 90,
@@ -1582,7 +1671,8 @@ const ExercisesDatabase = [
             "Slowly lower the dumbbell to the starting position as you inhale.",
             "Repeat for the recommended amount of repetitions."
         ],
-        "original_muscle": "hombros"
+        "original_muscle": "hombros",
+        "category": "fuerza"
     },
     {
         "id": 91,
@@ -1600,7 +1690,8 @@ const ExercisesDatabase = [
             "Slowly lower the dumbbells to the starting position as you inhale.",
             "Repeat for the recommended amount of repetitions and then switch to the other arm."
         ],
-        "original_muscle": "hombros"
+        "original_muscle": "hombros",
+        "category": "fuerza"
     },
     {
         "id": 92,
@@ -1618,7 +1709,8 @@ const ExercisesDatabase = [
             "As you breathe out, slowly begin to curl the weights up as you simultaneously rotate your wrists so that the palms of the hands face up. Continue curling the weight until your biceps are fully contracted and squeeze hard at the top position for a second. Tip: Only the forearms should move. Upper arms should remain stationary and elbows should stay in throughout the movement.",
             "Return back to the starting position very slowly."
         ],
-        "original_muscle": "bíceps"
+        "original_muscle": "bíceps",
+        "category": "fuerza"
     },
     {
         "id": 93,
@@ -1637,7 +1729,8 @@ const ExercisesDatabase = [
             "After a second contraction at the top of the movement, as you inhale, slowly go back down to the starting position.",
             "Repeat for the recommended amount of repetitions."
         ],
-        "original_muscle": "espalda media"
+        "original_muscle": "espalda media",
+        "category": "fuerza"
     },
     {
         "id": 94,
@@ -1657,7 +1750,8 @@ const ExercisesDatabase = [
             "Repeat for the recommended amount of reps.",
             "When finished step on the lever again and slowly get the handles back to their original place."
         ],
-        "original_muscle": "pecho"
+        "original_muscle": "pecho",
+        "category": "fuerza"
     },
     {
         "id": 95,
@@ -1674,7 +1768,8 @@ const ExercisesDatabase = [
             "Pause at the top of the movement, and then slowly return the weight to the starting position.",
             "Avoid returning the weight all the way to the stops until the set is complete to keep tension on the muscles being worked."
         ],
-        "original_muscle": "bíceps"
+        "original_muscle": "bíceps",
+        "category": "fuerza"
     },
     {
         "id": 96,
@@ -1692,7 +1787,8 @@ const ExercisesDatabase = [
             "Lower the handles slowly back to the starting position as you inhale.",
             "Repeat for the recommended amount of repetitions."
         ],
-        "original_muscle": "bíceps"
+        "original_muscle": "bíceps",
+        "category": "fuerza"
     },
     {
         "id": 97,
@@ -1710,7 +1806,8 @@ const ExercisesDatabase = [
             "Lower the handles slowly back to the starting position as you inhale.",
             "Repeat for the recommended amount of repetitions."
         ],
-        "original_muscle": "hombros"
+        "original_muscle": "hombros",
+        "category": "fuerza"
     },
     {
         "id": 98,
@@ -1727,7 +1824,8 @@ const ExercisesDatabase = [
             "Pause at the completion of the movement, and then slowly return the weight to the starting position.",
             "Avoid returning the weight all the way to the stops until the set is complete to keep tension on the muscles being worked."
         ],
-        "original_muscle": "tríceps"
+        "original_muscle": "tríceps",
+        "category": "fuerza"
     },
     {
         "id": 99,
@@ -1744,7 +1842,8 @@ const ExercisesDatabase = [
             "As you inhale go back to the starting position.",
             "Repeat for the recommended amount of repetitions."
         ],
-        "original_muscle": "espalda media"
+        "original_muscle": "espalda media",
+        "category": "fuerza"
     },
     {
         "id": 100,
@@ -1764,7 +1863,8 @@ const ExercisesDatabase = [
             "Begin to raise the unit as you exhale by pushing the floor with mainly with the heels of your feet as you straighten the legs again and go back to the starting position.",
             "Repeat for the recommended amount of repetitions."
         ],
-        "original_muscle": "cuádriceps"
+        "original_muscle": "cuádriceps",
+        "category": "fuerza"
     },
     {
         "id": 101,
@@ -1782,7 +1882,8 @@ const ExercisesDatabase = [
             "Pushing mainly with the heels of your feet and using the quadriceps go back to the starting position as you exhale.",
             "Repeat for the recommended amount of repetitions and ensure to lock the safety pins properly once you are done. You do not want that platform falling on you fully loaded."
         ],
-        "original_muscle": "cuádriceps"
+        "original_muscle": "cuádriceps",
+        "category": "fuerza"
     },
     {
         "id": 102,
@@ -1802,7 +1903,8 @@ const ExercisesDatabase = [
             "Repeat the movement for the specified amount of repetitions.",
             "Switch sides and repeat again with the other arm."
         ],
-        "original_muscle": "espalda media"
+        "original_muscle": "espalda media",
+        "category": "fuerza"
     },
     {
         "id": 103,
@@ -1821,7 +1923,8 @@ const ExercisesDatabase = [
             "Hold for a second at the contracted position and repeat the movement for the prescribed amount of repetitions.",
             "Switch arms and repeat the exercise."
         ],
-        "original_muscle": "pecho"
+        "original_muscle": "pecho",
+        "category": "fuerza"
     },
     {
         "id": 104,
@@ -1840,7 +1943,8 @@ const ExercisesDatabase = [
             "Repeat the movement for the prescribed amount of repetitions.",
             "Switch arms and repeat the movement."
         ],
-        "original_muscle": "hombros"
+        "original_muscle": "hombros",
+        "category": "fuerza"
     },
     {
         "id": 105,
@@ -1859,7 +1963,8 @@ const ExercisesDatabase = [
             "Repeat for the recommended amount of repetitions.",
             "Switch arms and repeat the exercise."
         ],
-        "original_muscle": "hombros"
+        "original_muscle": "hombros",
+        "category": "fuerza"
     },
     {
         "id": 106,
@@ -1879,7 +1984,8 @@ const ExercisesDatabase = [
             "Repeat the movement for the prescribed amount of repetitions of your training program.",
             "Switch arms and repeat the movement."
         ],
-        "original_muscle": "pecho"
+        "original_muscle": "pecho",
+        "category": "fuerza"
     },
     {
         "id": 107,
@@ -1897,7 +2003,8 @@ const ExercisesDatabase = [
             "Squeeze the biceps hard for a second at the contracted position and repeat for the recommended amount of repetitions.",
             "Switch arms and repeat the movement."
         ],
-        "original_muscle": "bíceps"
+        "original_muscle": "bíceps",
+        "category": "fuerza"
     },
     {
         "id": 108,
@@ -1916,7 +2023,8 @@ const ExercisesDatabase = [
             "Repeat until you have performed your set repetitions.",
             "Switch arms and repeat the movement."
         ],
-        "original_muscle": "tríceps"
+        "original_muscle": "tríceps",
+        "category": "fuerza"
     },
     {
         "id": 109,
@@ -1936,7 +2044,8 @@ const ExercisesDatabase = [
             "Switch arms and repeat the movement.",
             "Switch arms again and repeat the movement."
         ],
-        "original_muscle": "tríceps"
+        "original_muscle": "tríceps",
+        "category": "fuerza"
     },
     {
         "id": 110,
@@ -1956,7 +2065,8 @@ const ExercisesDatabase = [
             "Your forearms should be stationary as your wrist is the only movement needed to perform this exercise.",
             "Repeat for the recommended amount of repetitions."
         ],
-        "original_muscle": "antebrazos"
+        "original_muscle": "antebrazos",
+        "category": "fuerza"
     },
     {
         "id": 111,
@@ -1976,7 +2086,8 @@ const ExercisesDatabase = [
             "Your forearms should be stationary as your wrist is the only movement needed to perform this exercise.",
             "Repeat for the recommended amount of repetitions."
         ],
-        "original_muscle": "antebrazos"
+        "original_muscle": "antebrazos",
+        "category": "fuerza"
     },
     {
         "id": 112,
@@ -1994,7 +2105,8 @@ const ExercisesDatabase = [
             "Press mainly with the heel of the foot to bring the body back to the starting position while exhaling.",
             "Repeat for the recommended amount of repetitions."
         ],
-        "original_muscle": "cuádriceps"
+        "original_muscle": "cuádriceps",
+        "category": "fuerza"
     },
     {
         "id": 113,
@@ -2012,7 +2124,8 @@ const ExercisesDatabase = [
             "Feel the contraction for a second and begin to lower the weights back down to the starting position while inhaling. Tip: Keep the palms facing down with the little finger slightly higher while lifting and lowering the weights as it will concentrate the stress on your shoulders mainly.",
             "Repeat for the recommended amount of repetitions."
         ],
-        "original_muscle": "hombros"
+        "original_muscle": "hombros",
+        "category": "fuerza"
     },
     {
         "id": 114,
@@ -2029,7 +2142,8 @@ const ExercisesDatabase = [
             "As you exhale, use the biceps to curl the weight up until your biceps is fully contracted and the dumbbells are at shoulder height.",
             "Squeeze the biceps hard for a second at the contracted position and repeat for the recommended amount of repetitions."
         ],
-        "original_muscle": "bíceps"
+        "original_muscle": "bíceps",
+        "category": "fuerza"
     },
     {
         "id": 115,
@@ -2045,7 +2159,8 @@ const ExercisesDatabase = [
             "Select the desired option from the menu. You may have to start pedaling to turn it on. You can use the manual setting, or you can select a program to use. Typically, you can enter your age and weight to estimate the amount of calories burned during exercise. The level of resistance can be changed throughout the workout. The handles can be used to monitor your heart rate to help you stay at an appropriate intensity.",
             "Recumbent bikes offer convenience, cardiovascular benefits, and have less impact than other activities. A 150 lb person will burn about 230 calories cycling at a moderate rate for 30 minutes, compared to 450 calories or more running."
         ],
-        "original_muscle": "cuádriceps"
+        "original_muscle": "cuádriceps",
+        "category": "cardio"
     },
     {
         "id": 116,
@@ -2064,7 +2179,8 @@ const ExercisesDatabase = [
             "Feel the contraction and slowly lower the weights back down to the starting position while inhaling.",
             "Repeat for the recommended amount of repetitions."
         ],
-        "original_muscle": "hombros"
+        "original_muscle": "hombros",
+        "category": "fuerza"
     },
     {
         "id": 117,
@@ -2084,7 +2200,8 @@ const ExercisesDatabase = [
             "Feel the contraction and slowly lower the weights back down to the starting position while inhaling.",
             "Repeat for the recommended amount of repetitions."
         ],
-        "original_muscle": "hombros"
+        "original_muscle": "hombros",
+        "category": "fuerza"
     },
     {
         "id": 118,
@@ -2102,7 +2219,8 @@ const ExercisesDatabase = [
             "Return by again flexing the hip, pulling the carriage forward as far as you can.",
             "Repeat for the desired number of repetitions."
         ],
-        "original_muscle": "isquiotibiales"
+        "original_muscle": "isquiotibiales",
+        "category": "fuerza"
     },
     {
         "id": 119,
@@ -2119,7 +2237,8 @@ const ExercisesDatabase = [
             "Keep your arms slightly bent throughout the movement, with all of the motion occurring at the shoulder joint.",
             "Pause at the rear of the movement, and slowly return the weight to the starting position."
         ],
-        "original_muscle": "hombros"
+        "original_muscle": "hombros",
+        "category": "fuerza"
     },
     {
         "id": 120,
@@ -2135,7 +2254,8 @@ const ExercisesDatabase = [
             "There are three phases of movement when using a rower. The first phase is when you come forward on the rower. Your knees are bent and against your chest. Your upper body is leaning slightly forward while still maintaining good posture. Next, push against the foot pedals and extend your legs while bringing your hands to your upper abdominal area, squeezing your shoulders back as you do so. To avoid straining your back, use primarily your leg and hip muscles.",
             "The recovery phase simply involves straightening your arms, bending the knees, and bringing your body forward again as you transition back into the first phase."
         ],
-        "original_muscle": "cuádriceps"
+        "original_muscle": "cuádriceps",
+        "category": "cardio"
     },
     {
         "id": 121,
@@ -2150,7 +2270,8 @@ const ExercisesDatabase = [
             "To begin, step onto the treadmill and select the desired option from the menu. Most treadmills have a manual setting, or you can select a program to run. Typically, you can enter your age and weight to estimate the amount of calories burned during exercise. Elevation can be adjusted to change the intensity of the workout.",
             "Treadmills offer convenience, cardiovascular benefits, and usually have less impact than running outside. A 150 lb person will burn over 450 calories running 8 miles per hour for 30 minutes. Maintain proper posture as you run, and only hold onto the handles when necessary, such as when dismounting or checking your heart rate."
         ],
-        "original_muscle": "cuádriceps"
+        "original_muscle": "cuádriceps",
+        "category": "cardio"
     },
     {
         "id": 122,
@@ -2170,7 +2291,8 @@ const ExercisesDatabase = [
             "Repeat the movement for the prescribed amount of repetitions.",
             "Switch arms and repeat the exercise."
         ],
-        "original_muscle": "tríceps"
+        "original_muscle": "tríceps",
+        "category": "fuerza"
     },
     {
         "id": 123,
@@ -2189,7 +2311,8 @@ const ExercisesDatabase = [
             "After a one second contraction at the top, slowly lower the dumbbells back to the starting position.",
             "Repeat for the recommended amount of repetitions."
         ],
-        "original_muscle": "hombros"
+        "original_muscle": "hombros",
+        "category": "fuerza"
     },
     {
         "id": 124,
@@ -2208,7 +2331,8 @@ const ExercisesDatabase = [
             "After a second contraction at the top, slowly lower the dumbbells back to the starting position as you inhale.",
             "Repeat the movement for the prescribed amount of repetitions."
         ],
-        "original_muscle": "tríceps"
+        "original_muscle": "tríceps",
+        "category": "fuerza"
     },
     {
         "id": 125,
@@ -2227,7 +2351,8 @@ const ExercisesDatabase = [
             "Raise the heels by extending the ankles as high as possible as you contract the calves and breathe out. Hold the top contraction for a second.",
             "Repeat for the recommended amount of repetitions."
         ],
-        "original_muscle": "pantorrillas"
+        "original_muscle": "pantorrillas",
+        "category": "fuerza"
     },
     {
         "id": 126,
@@ -2245,7 +2370,8 @@ const ExercisesDatabase = [
             "Slowly begin to bring the dumbbells back to the starting position as your breathe in and as you rotate the wrists back to a neutral grip.",
             "Repeat for the recommended amount of repetitions."
         ],
-        "original_muscle": "bíceps"
+        "original_muscle": "bíceps",
+        "category": "fuerza"
     },
     {
         "id": 127,
@@ -2264,7 +2390,8 @@ const ExercisesDatabase = [
             "Slowly begin to bring the dumbbells back to the starting position as your breathe in. Remember to rotate your arms as you lower the dumbbells so that you can switch back to a neutral grip.",
             "Repeat for the recommended amount of repetitions."
         ],
-        "original_muscle": "bíceps"
+        "original_muscle": "bíceps",
+        "category": "fuerza"
     },
     {
         "id": 128,
@@ -2284,7 +2411,8 @@ const ExercisesDatabase = [
             "Repeat for the recommended amount of repetitions.",
             "When finished, simply lower the dumbbells to the floor."
         ],
-        "original_muscle": "antebrazos"
+        "original_muscle": "antebrazos",
+        "category": "fuerza"
     },
     {
         "id": 129,
@@ -2304,7 +2432,8 @@ const ExercisesDatabase = [
             "Repeat for the recommended amount of repetitions.",
             "When finished, simply lower the dumbbells to the floor."
         ],
-        "original_muscle": "antebrazos"
+        "original_muscle": "antebrazos",
+        "category": "fuerza"
     },
     {
         "id": 130,
@@ -2323,7 +2452,8 @@ const ExercisesDatabase = [
             "After a second pause, slowly come down back to the starting position as you inhale.",
             "Repeat for the recommended amount of repetitions."
         ],
-        "original_muscle": "hombros"
+        "original_muscle": "hombros",
+        "category": "fuerza"
     },
     {
         "id": 131,
@@ -2341,7 +2471,8 @@ const ExercisesDatabase = [
             "Slowly return to the starting position as you breathe in.",
             "Repeat for the recommended amount of repetitions."
         ],
-        "original_muscle": "isquiotibiales"
+        "original_muscle": "isquiotibiales",
+        "category": "fuerza"
     },
     {
         "id": 132,
@@ -2360,7 +2491,8 @@ const ExercisesDatabase = [
             "Now curl the dumbbell as high as possible as you contract the forearms and as you exhale. Keep the contraction for a second before you lower again. Tip: The only movement should happen at the wrist.",
             "Perform for the recommended amount of repetitions, switch arms and repeat the movement."
         ],
-        "original_muscle": "antebrazos"
+        "original_muscle": "antebrazos",
+        "category": "fuerza"
     },
     {
         "id": 133,
@@ -2379,7 +2511,8 @@ const ExercisesDatabase = [
             "Now curl the dumbbell as high as possible as you contract the forearms and as you exhale. Keep the contraction for a second before you lower again. Tip: The only movement should happen at the wrist.",
             "Perform for the recommended amount of repetitions, switch arms and repeat the movement."
         ],
-        "original_muscle": "antebrazos"
+        "original_muscle": "antebrazos",
+        "category": "fuerza"
     },
     {
         "id": 134,
@@ -2396,7 +2529,8 @@ const ExercisesDatabase = [
             "Lower the dumbbells back down slowly to the starting position as you inhale.",
             "Repeat for the recommended amount of repetitions."
         ],
-        "original_muscle": "hombros"
+        "original_muscle": "hombros",
+        "category": "fuerza"
     },
     {
         "id": 135,
@@ -2413,7 +2547,8 @@ const ExercisesDatabase = [
             "Go back to the starting position by using the triceps to raise the dumbbell. Breathe out as you perform this step.",
             "Repeat for the recommended amount of repetitions."
         ],
-        "original_muscle": "tríceps"
+        "original_muscle": "tríceps",
+        "category": "fuerza"
     },
     {
         "id": 136,
@@ -2431,7 +2566,8 @@ const ExercisesDatabase = [
             "Once you reach the top position breathe in. Then, with the weight fully extended overhead and you bent over to your right hand side, begin the movement to the left side.",
             "Repeat for the recommended amount of repetitions."
         ],
-        "original_muscle": "hombros"
+        "original_muscle": "hombros",
+        "category": "fuerza"
     },
     {
         "id": 137,
@@ -2448,7 +2584,8 @@ const ExercisesDatabase = [
             "Lower the dumbbells back down slowly to the starting position as you inhale.",
             "Repeat for the recommended amount of repetitions."
         ],
-        "original_muscle": "hombros"
+        "original_muscle": "hombros",
+        "category": "fuerza"
     },
     {
         "id": 138,
@@ -2467,7 +2604,8 @@ const ExercisesDatabase = [
             "On the next repetition, raise the weights in front of you to shoulder height before moving the weights laterally to your sides.",
             "Lower the weights to the starting position."
         ],
-        "original_muscle": "hombros"
+        "original_muscle": "hombros",
+        "category": "fuerza"
     },
     {
         "id": 139,
@@ -2484,7 +2622,8 @@ const ExercisesDatabase = [
             "Return to the starting position without letting the weight stop, keeping tension on the muscle.",
             "Repeat for the desired number of repetitions."
         ],
-        "original_muscle": "cuádriceps"
+        "original_muscle": "cuádriceps",
+        "category": "fuerza"
     },
     {
         "id": 140,
@@ -2500,7 +2639,8 @@ const ExercisesDatabase = [
             "Raise the weight until it is above shoulder level, keeping your arms extended. Your torso and hips should remain stationary throughout the movement.",
             "Return to the starting position and repeat for the recommended amount of repetitions."
         ],
-        "original_muscle": "hombros"
+        "original_muscle": "hombros",
+        "category": "fuerza"
     },
     {
         "id": 141,
@@ -2518,7 +2658,8 @@ const ExercisesDatabase = [
             "After a brief pause return the weight to the starting position.",
             "Repeat for the desired number of repetitions before engaging the hooks to rack the weight."
         ],
-        "original_muscle": "trapecios"
+        "original_muscle": "trapecios",
+        "category": "fuerza"
     },
     {
         "id": 142,
@@ -2536,7 +2677,8 @@ const ExercisesDatabase = [
             "Repeat the movement for the prescribed amount of repetitions.",
             "When you are done, lock the bar back in the rack."
         ],
-        "original_muscle": "pecho"
+        "original_muscle": "pecho",
+        "category": "fuerza"
     },
     {
         "id": 143,
@@ -2555,7 +2697,8 @@ const ExercisesDatabase = [
             "Slowly lower the weight again to the starting position as you inhale.",
             "Repeat for the recommended amount of repetitions."
         ],
-        "original_muscle": "espalda media"
+        "original_muscle": "espalda media",
+        "category": "fuerza"
     },
     {
         "id": 144,
@@ -2573,7 +2716,8 @@ const ExercisesDatabase = [
             "Return slowly to the starting position as you breathe in while lowering your heels.",
             "Repeat for the recommended amount of repetitions."
         ],
-        "original_muscle": "pantorrillas"
+        "original_muscle": "pantorrillas",
+        "category": "fuerza"
     },
     {
         "id": 145,
@@ -2591,7 +2735,8 @@ const ExercisesDatabase = [
             "Repeat the movement for the prescribed amount of repetitions.",
             "When you are done, lock the bar back in the rack."
         ],
-        "original_muscle": "tríceps"
+        "original_muscle": "tríceps",
+        "category": "fuerza"
     },
     {
         "id": 146,
@@ -2609,7 +2754,8 @@ const ExercisesDatabase = [
             "Pause briefly, and then extend your arms to push the weight back to the starting position.",
             "After completing the desired number of repetitions, rotate the bar to rack the weight."
         ],
-        "original_muscle": "pecho"
+        "original_muscle": "pecho",
+        "category": "fuerza"
     },
     {
         "id": 147,
@@ -2628,7 +2774,8 @@ const ExercisesDatabase = [
             "Allow the arms to flex at this point, rotating the elbows around the bar to receive it on your shoulders.",
             "Extend through the hips and knees to come to a standing position with the bar racked on your shoulders to complete the movement."
         ],
-        "original_muscle": "isquiotibiales"
+        "original_muscle": "isquiotibiales",
+        "category": "fuerza"
     },
     {
         "id": 148,
@@ -2645,7 +2792,8 @@ const ExercisesDatabase = [
             "After a brief pause, return the hips to the bench.",
             "Repeat for the desired number of repetitions."
         ],
-        "original_muscle": "abdominales"
+        "original_muscle": "abdominales",
+        "category": "fuerza"
     },
     {
         "id": 149,
@@ -2663,7 +2811,8 @@ const ExercisesDatabase = [
             "Repeat the movement for the prescribed amount of repetitions.",
             "When you are done, place the bar back in the rack."
         ],
-        "original_muscle": "pecho"
+        "original_muscle": "pecho",
+        "category": "fuerza"
     },
     {
         "id": 150,
@@ -2679,7 +2828,8 @@ const ExercisesDatabase = [
             "Begin the movement by driving through your feet to move the bar upward, extending the hips and knees. Do not lock out your knees.",
             "At the top of the motion, pause briefly before returning to the starting position."
         ],
-        "original_muscle": "cuádriceps"
+        "original_muscle": "cuádriceps",
+        "category": "fuerza"
     },
     {
         "id": 151,
@@ -2697,7 +2847,8 @@ const ExercisesDatabase = [
             "After a brief pause, return the weight to the starting position.",
             "Repeat for the desired number of repetitions before engaging the hooks to rack the weight."
         ],
-        "original_muscle": "hombros"
+        "original_muscle": "hombros",
+        "category": "fuerza"
     },
     {
         "id": 152,
@@ -2715,7 +2866,8 @@ const ExercisesDatabase = [
             "Then lift the barbell back to the starting position using your shoulders while exhaling.",
             "Repeat for the recommended amount of repetitions."
         ],
-        "original_muscle": "hombros"
+        "original_muscle": "hombros",
+        "category": "fuerza"
     },
     {
         "id": 153,
@@ -2733,7 +2885,8 @@ const ExercisesDatabase = [
             "Maintaining good posture, lower yourself by flexing the knee and hip, going down as far as flexibility allows.",
             "Pause briefly at the bottom and then return to the starting position by driving through the heel of your foot, extending the knee and hip."
         ],
-        "original_muscle": "cuádriceps"
+        "original_muscle": "cuádriceps",
+        "category": "fuerza"
     },
     {
         "id": 154,
@@ -2752,7 +2905,8 @@ const ExercisesDatabase = [
             "Slowly go back down to the starting position as you breathe in by lowering the balls of your feet and toes.",
             "Repeat for the recommended amount of repetitions."
         ],
-        "original_muscle": "pantorrillas"
+        "original_muscle": "pantorrillas",
+        "category": "fuerza"
     },
     {
         "id": 155,
@@ -2771,7 +2925,8 @@ const ExercisesDatabase = [
             "Begin to raise the bar as you exhale by pushing the floor with the heel of your foot as you straighten the legs again and go back to the starting position.",
             "Repeat for the recommended amount of repetitions."
         ],
-        "original_muscle": "cuádriceps"
+        "original_muscle": "cuádriceps",
+        "category": "fuerza"
     },
     {
         "id": 156,
@@ -2789,7 +2944,8 @@ const ExercisesDatabase = [
             "Start bringing your torso up straight again as soon as you feel the hamstrings stretch by extending your hips and waist until you are back at the starting position. Inhale as you perform this movement.",
             "Repeat for the recommended amount of repetitions."
         ],
-        "original_muscle": "isquiotibiales"
+        "original_muscle": "isquiotibiales",
+        "category": "fuerza"
     },
     {
         "id": 157,
@@ -2807,7 +2963,8 @@ const ExercisesDatabase = [
             "Lower the bar back down slowly to the starting position. Inhale as you perform this portion of the movement.",
             "Repeat for the recommended amount of repetitions."
         ],
-        "original_muscle": "trapecios"
+        "original_muscle": "trapecios",
+        "category": "fuerza"
     },
     {
         "id": 158,
@@ -2827,7 +2984,8 @@ const ExercisesDatabase = [
             "Repeat for the recommended amount of repetitions.",
             "Switch legs and repeat the movement."
         ],
-        "original_muscle": "cuádriceps"
+        "original_muscle": "cuádriceps",
+        "category": "fuerza"
     },
     {
         "id": 159,
@@ -2844,7 +3002,8 @@ const ExercisesDatabase = [
             "Keeping your arms straight and the dumbbells parallel to the ground, rotate your torso to swing the weights to your opposite side.",
             "Continue alternating, rotating from one side to the other until the set is complete."
         ],
-        "original_muscle": "abdominales"
+        "original_muscle": "abdominales",
+        "category": "fuerza"
     },
     {
         "id": 160,
@@ -2861,7 +3020,8 @@ const ExercisesDatabase = [
             "Begin by descending, flexing your knee and hip to lower your body down. Maintain good posture througout the movement. Keep the front knee in line with the foot as you perform the exercise.",
             "At the bottom of the movement, drive through the heel to extend the knee and hip to return to the starting position."
         ],
-        "original_muscle": "cuádriceps"
+        "original_muscle": "cuádriceps",
+        "category": "fuerza"
     },
     {
         "id": 161,
@@ -2877,7 +3037,8 @@ const ExercisesDatabase = [
             "Pump your legs up and down in an established rhythm, driving the pedals down but not all the way to the floor. It is recommended that you maintain your grip on the handles so that you don't fall. The handles can be used to monitor your heart rate to help you stay at an appropriate intensity.",
             "Stairmasters offer convenience, cardiovascular benefits, and usually have less impact than running outside. They are typically much harder than other cardio equipment. A 150 lb person will typically burn over 300 calories in 30 minutes, compared to about 175 calories walking."
         ],
-        "original_muscle": "cuádriceps"
+        "original_muscle": "cuádriceps",
+        "category": "cardio"
     },
     {
         "id": 162,
@@ -2894,7 +3055,8 @@ const ExercisesDatabase = [
             "After a brief pause, return the weight to the starting position.",
             "Repeat for the opposite side, continuing to alternate between arms."
         ],
-        "original_muscle": "hombros"
+        "original_muscle": "hombros",
+        "category": "fuerza"
     },
     {
         "id": 163,
@@ -2913,7 +3075,8 @@ const ExercisesDatabase = [
             "Repeat the movement for the prescribed amount of repetitions.",
             "Switch arms and repeat the exercise."
         ],
-        "original_muscle": "tríceps"
+        "original_muscle": "tríceps",
+        "category": "fuerza"
     },
     {
         "id": 164,
@@ -2930,7 +3093,8 @@ const ExercisesDatabase = [
             "After a second contraction at the top, slowly lower the dumbbells back to their starting position as you inhale.",
             "Repeat the movement for the prescribed amount of repetitions."
         ],
-        "original_muscle": "tríceps"
+        "original_muscle": "tríceps",
+        "category": "fuerza"
     },
     {
         "id": 165,
@@ -2948,7 +3112,8 @@ const ExercisesDatabase = [
             "Go back slowly to the starting position as you breathe in by lowering your heels as you bend the ankles until calves are stretched.",
             "Repeat for the recommended amount of repetitions."
         ],
-        "original_muscle": "pantorrillas"
+        "original_muscle": "pantorrillas",
+        "category": "fuerza"
     },
     {
         "id": 166,
@@ -2965,7 +3130,8 @@ const ExercisesDatabase = [
             "Lower the dumbbell back to the starting position.",
             "Repeat the movement for the prescribed amount of repetitions."
         ],
-        "original_muscle": "bíceps"
+        "original_muscle": "bíceps",
+        "category": "fuerza"
     },
     {
         "id": 167,
@@ -2982,7 +3148,8 @@ const ExercisesDatabase = [
             "As you inhale, go back to the starting position by slowly lowering the heels.",
             "Repeat for the recommended amount of times."
         ],
-        "original_muscle": "pantorrillas"
+        "original_muscle": "pantorrillas",
+        "category": "fuerza"
     },
     {
         "id": 168,
@@ -2998,7 +3165,8 @@ const ExercisesDatabase = [
             "Maintaining strict technique with no leg drive or leaning back, extend through the elbow to raise the weights together directly above your head.",
             "Pause, and slowly return the weight to the starting position."
         ],
-        "original_muscle": "hombros"
+        "original_muscle": "hombros",
+        "category": "fuerza"
     },
     {
         "id": 169,
@@ -3015,7 +3183,8 @@ const ExercisesDatabase = [
             "Slowly begin to bring the dumbbells back to starting position as your breathe in.",
             "Repeat for the recommended amount of repetitions."
         ],
-        "original_muscle": "bíceps"
+        "original_muscle": "bíceps",
+        "category": "fuerza"
     },
     {
         "id": 170,
@@ -3033,7 +3202,8 @@ const ExercisesDatabase = [
             "Slowly return to the starting position using the same path as you inhale.",
             "Repeat for the recommended amount of repetitions."
         ],
-        "original_muscle": "hombros"
+        "original_muscle": "hombros",
+        "category": "fuerza"
     },
     {
         "id": 171,
@@ -3051,7 +3221,8 @@ const ExercisesDatabase = [
             "Go back to the starting position by using the triceps to raise the dumbbell. Breathe out as you perform this step.",
             "Repeat for the recommended amount of repetitions."
         ],
-        "original_muscle": "tríceps"
+        "original_muscle": "tríceps",
+        "category": "fuerza"
     },
     {
         "id": 172,
@@ -3068,7 +3239,8 @@ const ExercisesDatabase = [
             "Lower the dumbbells back down slowly to the starting position. Inhale as you perform this portion of the movement.",
             "Repeat for the recommended amount of repetitions."
         ],
-        "original_muscle": "trapecios"
+        "original_muscle": "trapecios",
+        "category": "fuerza"
     },
     {
         "id": 173,
@@ -3088,7 +3260,8 @@ const ExercisesDatabase = [
             "Slowly begin to bring the dumbbells back to the starting position as your breathe in. Remember to rotate the wrists as you lower the weight in order to switch back to a neutral grip.",
             "Repeat for the recommended amount of repetitions."
         ],
-        "original_muscle": "bíceps"
+        "original_muscle": "bíceps",
+        "category": "fuerza"
     },
     {
         "id": 174,
@@ -3106,7 +3279,8 @@ const ExercisesDatabase = [
             "As you inhale, bring the legs back to the initial position. Repeat for the recommended amount of repetitions.",
             "Perform the same exercise now for the left leg."
         ],
-        "original_muscle": "isquiotibiales"
+        "original_muscle": "isquiotibiales",
+        "category": "fuerza"
     },
     {
         "id": 175,
@@ -3125,7 +3299,8 @@ const ExercisesDatabase = [
             "Repeat for the recommended amount of repetitions.",
             "Switch arms while performing this exercise."
         ],
-        "original_muscle": "bíceps"
+        "original_muscle": "bíceps",
+        "category": "fuerza"
     },
     {
         "id": 176,
@@ -3144,7 +3319,8 @@ const ExercisesDatabase = [
             "Repeat for the recommended amount of repetitions.",
             "Switch arms and repeat the exercise."
         ],
-        "original_muscle": "tríceps"
+        "original_muscle": "tríceps",
+        "category": "fuerza"
     },
     {
         "id": 177,
@@ -3164,7 +3340,8 @@ const ExercisesDatabase = [
             "Repeat for the recommended amount of repetitions.",
             "Switch arms and repeat the exercise."
         ],
-        "original_muscle": "hombros"
+        "original_muscle": "hombros",
+        "category": "fuerza"
     },
     {
         "id": 178,
@@ -3181,7 +3358,8 @@ const ExercisesDatabase = [
             "While inhaling lower the weights down until your arm is at a 90 degree angle again.",
             "Repeat for the recommended amount of repetitions."
         ],
-        "original_muscle": "hombros"
+        "original_muscle": "hombros",
+        "category": "fuerza"
     },
     {
         "id": 179,
@@ -3196,7 +3374,8 @@ const ExercisesDatabase = [
             "To begin, step onto the stepmill and select the desired option from the menu. You can choose a manual setting, or you can select a program to run. Typically, you can enter your age and weight to estimate the amount of calories burned during exercise. Use caution so that you don't trip as you climb the stairs. It is recommended that you maintain your grip on the handles so that you don't fall.",
             "Stepmills offer convenience, cardiovascular benefits, and usually have less impact than running outside while offering a similar rate of calories burned. They are typically much harder than other cardio equipment. A 150 lb person will typically burn over 300 calories in 30 minutes, compared to about 175 calories walking."
         ],
-        "original_muscle": "cuádriceps"
+        "original_muscle": "cuádriceps",
+        "category": "cardio"
     },
     {
         "id": 180,
@@ -3214,7 +3393,8 @@ const ExercisesDatabase = [
             "Start bringing your torso up straight again by extending your hips and waist until you are back at the starting position. Inhale as you perform this movement.",
             "Repeat for the recommended amount of repetitions."
         ],
-        "original_muscle": "isquiotibiales"
+        "original_muscle": "isquiotibiales",
+        "category": "fuerza"
     },
     {
         "id": 181,
@@ -3233,7 +3413,8 @@ const ExercisesDatabase = [
             "At that point, bring the dumbbell back to the starting position using the arc through which the weight was lowered and exhale as you perform this movement.",
             "Hold the weight on the initial position for a second and repeat the motion for the prescribed number of repetitions."
         ],
-        "original_muscle": "pecho"
+        "original_muscle": "pecho",
+        "category": "fuerza"
     },
     {
         "id": 182,
@@ -3251,7 +3432,8 @@ const ExercisesDatabase = [
             "As you breathe out, move the dumbbells up using your triceps and the same semi-circular motion but in reverse. Attempt to keep the dumbbells together as they move up. Lock your arms in the contracted position, hold for a second and then start coming down again slowly again. Tip: It should take at least twice as long to go down than to come up.",
             "Repeat the movement for the prescribed amount of repetitions of your training program."
         ],
-        "original_muscle": "tríceps"
+        "original_muscle": "tríceps",
+        "category": "fuerza"
     },
     {
         "id": 183,
@@ -3268,7 +3450,8 @@ const ExercisesDatabase = [
             "Feel the contraction for a second and begin to move your legs back to the starting position while breathing in. Note: Remember to keep your upper body stationary to prevent any injuries from occurring.",
             "Repeat for the recommended amount of repetitions."
         ],
-        "original_muscle": "abductores"
+        "original_muscle": "abductores",
+        "category": "fuerza"
     },
     {
         "id": 184,
@@ -3285,7 +3468,8 @@ const ExercisesDatabase = [
             "Feel the contraction for a second and begin to move your legs back to the starting position while breathing in. Note: Remember to keep your upper body stationary and avoid fast jerking motions in order to prevent any injuries from occurring.",
             "Repeat for the recommended amount of repetitions."
         ],
-        "original_muscle": "aductores"
+        "original_muscle": "aductores",
+        "category": "fuerza"
     },
     {
         "id": 185,
@@ -3302,7 +3486,8 @@ const ExercisesDatabase = [
             "After a brief pause at the top contraction, inhale and slowly lower the dumbbells back down to the starting position.",
             "Repeat the movement for the prescribed amount of repetitions."
         ],
-        "original_muscle": "tríceps"
+        "original_muscle": "tríceps",
+        "category": "fuerza"
     },
     {
         "id": 186,
@@ -3319,7 +3504,8 @@ const ExercisesDatabase = [
             "As you exhale, use the biceps to curl the weights up until your biceps is fully contracted and the dumbbells are at shoulder height.",
             "Squeeze the biceps hard for a second at the contracted position and repeat for the recommended amount of repetitions."
         ],
-        "original_muscle": "bíceps"
+        "original_muscle": "bíceps",
+        "category": "fuerza"
     },
     {
         "id": 187,
@@ -3336,7 +3522,8 @@ const ExercisesDatabase = [
             "Powerfully reverse the motion by extending at the hips, knees, and ankles to propel yourself upward, swinging the dumbell over your head.",
             "As you land, absorb the impact through your legs and draw the dumbbell to your torso before the next repetition."
         ],
-        "original_muscle": "isquiotibiales"
+        "original_muscle": "isquiotibiales",
+        "category": "pliometría"
     },
     {
         "id": 188,
@@ -3351,7 +3538,8 @@ const ExercisesDatabase = [
             "To begin, step onto the treadmill and select the desired option from the menu. Most treadmills have a manual setting, or you can select a program to run. Typically, you can enter your age and weight to estimate the amount of calories burned during exercise. Elevation can be adjusted to change the intensity of the workout.",
             "Treadmills offer convenience, cardiovascular benefits, and usually have less impact than walking outside. When walking, you should move at a moderate to fast pace, not a leisurely one. Being an activity of lower intensity, walking doesn't burn as many calories as some other activities, but still provides great benefit. A 150 lb person will burn about 175 calories walking 4 miles per hour for 30 minutes, compared to 450 calories running twice as fast. Maintain proper posture as you walk, and only hold onto the handles when necessary, such as when dismounting or checking your heart rate."
         ],
-        "original_muscle": "cuádriceps"
+        "original_muscle": "cuádriceps",
+        "category": "cardio"
     },
     {
         "id": 189,
@@ -3372,7 +3560,8 @@ const ExercisesDatabase = [
             "As the dumbbells close your thighs, start rotating the wrist so that you go back to a neutral (palms facing your body) grip.",
             "Repeat for the recommended amount of repetitions."
         ],
-        "original_muscle": "bíceps"
+        "original_muscle": "bíceps",
+        "category": "fuerza"
     },
     {
         "id": 190,
@@ -3391,7 +3580,8 @@ const ExercisesDatabase = [
             "Squeeze the biceps hard for a second at the contracted position and rotate your wrists so that the palms are facing down again.",
             "Repeat for the recommended amount of repetitions."
         ],
-        "original_muscle": "bíceps"
+        "original_muscle": "bíceps",
+        "category": "fuerza"
     }
 ];
 

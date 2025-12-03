@@ -69,8 +69,8 @@ const ActiveWorkoutSession = {
         ExerciseSelector.openForActive();
     },
 
-    openAddExerciseModal(exerciseName, category, images = []) {
-        this.currentExercise = { name: exerciseName, category: category, sets: [] };
+    openAddExerciseModal(exerciseName, category, images = [], exerciseType = 'strength') {
+        this.currentExercise = { name: exerciseName, category: category, type: exerciseType, sets: [] };
         document.getElementById('activeExerciseTitle').textContent = exerciseName;
 
         // Inject images
@@ -110,16 +110,32 @@ const ActiveWorkoutSession = {
     addSet() {
         const setsList = document.getElementById('activeSetsList');
         const setNumber = setsList.children.length + 1;
+        const isCardio = this.currentExercise && this.currentExercise.type === 'cardio';
 
         const setItem = document.createElement('div');
         setItem.className = 'set-item';
         setItem.dataset.setNumber = setNumber;
-        setItem.innerHTML = `
-            <div class="set-number">Serie ${setNumber}</div>
-            <div class="set-inputs">
+
+        let inputsHtml = '';
+        if (isCardio) {
+            inputsHtml = `
+                <input type="number" class="form-input set-time" placeholder="Min" min="1" required>
+                <span class="set-separator">min</span>
+                <input type="number" class="form-input set-distance" placeholder="Km" step="0.01" required>
+                <span class="set-separator">km</span>
+            `;
+        } else {
+            inputsHtml = `
                 <input type="number" class="form-input set-reps" placeholder="Reps" min="1" required>
                 <span class="set-separator">×</span>
                 <input type="number" class="form-input set-weight" placeholder="kg" step="0.5" required>
+            `;
+        }
+
+        setItem.innerHTML = `
+            <div class="set-number">Serie ${setNumber}</div>
+            <div class="set-inputs">
+                ${inputsHtml}
                 <button type="button" class="remove-set-btn" onclick="ActiveWorkoutSession.removeSet(${setNumber})" title="Eliminar serie">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <line x1="18" y1="6" x2="6" y2="18"></line>
@@ -159,13 +175,23 @@ const ActiveWorkoutSession = {
 
         if (!this.currentExercise) return;
 
+        const isCardio = this.currentExercise.type === 'cardio';
+
         // Collect sets
         const sets = [];
         document.querySelectorAll('#activeSetsList .set-item').forEach(setItem => {
-            const reps = parseInt(setItem.querySelector('.set-reps').value) || 0;
-            const weight = parseFloat(setItem.querySelector('.set-weight').value) || 0;
-            if (reps > 0) {
-                sets.push({ reps, weight });
+            if (isCardio) {
+                const time = parseFloat(setItem.querySelector('.set-time').value) || 0;
+                const distance = parseFloat(setItem.querySelector('.set-distance').value) || 0;
+                if (time > 0 || distance > 0) {
+                    sets.push({ time, distance });
+                }
+            } else {
+                const reps = parseInt(setItem.querySelector('.set-reps').value) || 0;
+                const weight = parseFloat(setItem.querySelector('.set-weight').value) || 0;
+                if (reps > 0) {
+                    sets.push({ reps, weight });
+                }
             }
         });
 
@@ -198,7 +224,10 @@ const ActiveWorkoutSession = {
             return;
         }
 
-        container.innerHTML = this.exercises.map((exercise, index) => `
+        container.innerHTML = this.exercises.map((exercise, index) => {
+            const isCardio = exercise.type === 'cardio';
+
+            return `
             <div class="active-exercise-card">
                 <div class="active-exercise-header">
                     <div class="active-exercise-name">${exercise.name}</div>
@@ -210,12 +239,17 @@ const ActiveWorkoutSession = {
                     </button>
                 </div>
                 <div class="active-exercise-sets">
-                    ${exercise.sets.map((set, setIndex) => `
-                        <span class="set-detail">${setIndex + 1}: ${set.reps}×${set.weight}kg</span>
-                    `).join('')}
+                    ${exercise.sets.map((set, setIndex) => {
+                if (isCardio) {
+                    return `<span class="set-detail">${setIndex + 1}: ${set.time}min / ${set.distance}km</span>`;
+                } else {
+                    return `<span class="set-detail">${setIndex + 1}: ${set.reps}×${set.weight}kg</span>`;
+                }
+            }).join('')}
                 </div>
             </div>
-        `).join('');
+            `;
+        }).join('');
     },
 
     removeExercise(index) {
@@ -292,7 +326,7 @@ ExerciseSelector.selectExercise = function (exercise) {
     if (this.isActiveMode) {
         this.close();
         this.isActiveMode = false;
-        ActiveWorkoutSession.openAddExerciseModal(exercise.name, exercise.muscle, exercise.images);
+        ActiveWorkoutSession.openAddExerciseModal(exercise.name, exercise.muscle, exercise.images, exercise.category);
     } else {
         originalSelectExercise.call(this, exercise);
     }

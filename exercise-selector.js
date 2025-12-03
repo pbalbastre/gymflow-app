@@ -122,7 +122,7 @@ const ExerciseSelector = {
 
     selectExercise(exercise) {
         this.close();
-        addExerciseToWorkout(exercise.name, exercise.muscle, exercise.images);
+        addExerciseToWorkout(exercise.name, exercise.muscle, exercise.images, exercise.category);
     },
 
     selectCustomExercise() {
@@ -135,7 +135,7 @@ const ExerciseSelector = {
 };
 
 // Updated: Add exercise to workout with individual sets support
-function addExerciseToWorkout(exerciseName, category = 'custom', images = []) {
+function addExerciseToWorkout(exerciseName, category = 'custom', images = [], exerciseType = 'strength') {
     currentExerciseCount++;
     const container = document.getElementById('exercisesList');
 
@@ -144,6 +144,7 @@ function addExerciseToWorkout(exerciseName, category = 'custom', images = []) {
     exerciseForm.dataset.exerciseId = currentExerciseCount;
     exerciseForm.dataset.exerciseName = exerciseName;
     exerciseForm.dataset.category = category;
+    exerciseForm.dataset.type = exerciseType;
     exerciseForm.dataset.setCount = 0;
 
     // Find exercise images (use passed images or fallback to search)
@@ -202,15 +203,31 @@ function addSetToExercise(exerciseId) {
     setCount++;
     exerciseForm.dataset.setCount = setCount;
 
+    const isCardio = exerciseForm.dataset.type === 'cardio';
+    let inputsHtml = '';
+
+    if (isCardio) {
+        inputsHtml = `
+            <input type="number" class="form-input set-time" placeholder="Min" min="1" required>
+            <span class="set-separator">min</span>
+            <input type="number" class="form-input set-distance" placeholder="Km" step="0.01" required>
+            <span class="set-separator">km</span>
+        `;
+    } else {
+        inputsHtml = `
+            <input type="number" class="form-input set-reps" placeholder="Reps" min="1" required>
+            <span class="set-separator">×</span>
+            <input type="number" class="form-input set-weight" placeholder="kg" step="0.5" required>
+        `;
+    }
+
     const setItem = document.createElement('div');
     setItem.className = 'set-item';
     setItem.dataset.setId = setCount;
     setItem.innerHTML = `
         <div class="set-number">Serie ${setCount}</div>
         <div class="set-inputs">
-            <input type="number" class="form-input set-reps" placeholder="Reps" min="1" required>
-            <span class="set-separator">×</span>
-            <input type="number" class="form-input set-weight" placeholder="kg" step="0.5" required>
+            ${inputsHtml}
             <button type="button" class="remove-set-btn" onclick="removeSetFromExercise(${exerciseId}, ${setCount})" title="Eliminar serie">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <line x1="18" y1="6" x2="6" y2="18"></line>

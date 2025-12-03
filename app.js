@@ -292,9 +292,13 @@ function createWorkoutCard(workout) {
                             <div class="exercise-item-detailed">
                                 <div class="exercise-name-detailed">${ex.name}</div>
                                 <div class="exercise-sets-list">
-                                    ${ex.sets.map((set, index) => `
-                                        <span class="set-detail">${index + 1}: ${set.reps}×${set.weight}kg</span>
-                                    `).join('')}
+                                    ${ex.sets.map((set, index) => {
+                if (set.time || set.distance) {
+                    return `<span class="set-detail">${index + 1}: ${set.time || 0}min / ${set.distance || 0}km</span>`;
+                } else {
+                    return `<span class="set-detail">${index + 1}: ${set.reps}×${set.weight}kg</span>`;
+                }
+            }).join('')}
                                 </div>
                             </div>
                         `;

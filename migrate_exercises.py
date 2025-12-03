@@ -92,7 +92,8 @@ def migrate():
             'equipment': ex['equipamiento'],
             'images': images,
             'instructions': ex.get('instrucciones', []),
-            'original_muscle': primary_muscle # Guardamos el específico por si acaso
+            'original_muscle': primary_muscle, # Guardamos el específico por si acaso
+            'category': ex.get('categoria', 'fuerza') # Categoría original (cardio, fuerza, etc.)
         }
         
         migrated_exercises.append(new_ex)
