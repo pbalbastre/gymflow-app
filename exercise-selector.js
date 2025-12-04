@@ -215,20 +215,44 @@ function addSetToExercise(exerciseId, setData = null) {
     exerciseForm.dataset.setCount = setCount;
 
     const isCardio = exerciseForm.dataset.type === 'cardio';
+
+    // Get previous set values if no setData provided and this is not the first set
+    let prevTime = '', prevDistance = '', prevReps = '', prevWeight = '';
+    if (!setData && setCount > 1) {
+        const lastSet = setsList.lastElementChild;
+        if (lastSet) {
+            if (isCardio) {
+                const timeInput = lastSet.querySelector('.set-time');
+                const distanceInput = lastSet.querySelector('.set-distance');
+                prevTime = timeInput ? timeInput.value : '';
+                prevDistance = distanceInput ? distanceInput.value : '';
+            } else {
+                const repsInput = lastSet.querySelector('.set-reps');
+                const weightInput = lastSet.querySelector('.set-weight');
+                prevReps = repsInput ? repsInput.value : '';
+                prevWeight = weightInput ? weightInput.value : '';
+            }
+        }
+    }
+
     let inputsHtml = '';
 
     if (isCardio) {
+        const timeValue = setData ? setData.time : prevTime;
+        const distanceValue = setData ? setData.distance : prevDistance;
         inputsHtml = `
-            <input type="number" class="form-input set-time" placeholder="Min" min="1" required value="${setData ? setData.time : ''}">
+            <input type="number" class="form-input set-time" placeholder="Min" min="1" required value="${timeValue}">
             <span class="set-separator">min</span>
-            <input type="number" class="form-input set-distance" placeholder="Km" step="0.01" required value="${setData ? setData.distance : ''}">
+            <input type="number" class="form-input set-distance" placeholder="Km" step="0.01" required value="${distanceValue}">
             <span class="set-separator">km</span>
         `;
     } else {
+        const repsValue = setData ? setData.reps : prevReps;
+        const weightValue = setData ? setData.weight : prevWeight;
         inputsHtml = `
-            <input type="number" class="form-input set-reps" placeholder="Reps" min="1" required value="${setData ? setData.reps : ''}">
+            <input type="number" class="form-input set-reps" placeholder="Reps" min="1" required value="${repsValue}">
             <span class="set-separator">×</span>
-            <input type="number" class="form-input set-weight" placeholder="kg" step="0.5" required value="${setData ? setData.weight : ''}">
+            <input type="number" class="form-input set-weight" placeholder="kg" step="0.5" required value="${weightValue}">
         `;
     }
 

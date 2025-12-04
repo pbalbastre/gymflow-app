@@ -112,6 +112,21 @@ const ActiveWorkoutSession = {
         const setNumber = setsList.children.length + 1;
         const isCardio = this.currentExercise && this.currentExercise.type === 'cardio';
 
+        // Get previous set values if available
+        let prevTime = '', prevDistance = '', prevReps = '', prevWeight = '';
+        if (setNumber > 1) {
+            const lastSet = setsList.lastElementChild;
+            if (lastSet) {
+                if (isCardio) {
+                    prevTime = lastSet.querySelector('.set-time').value;
+                    prevDistance = lastSet.querySelector('.set-distance').value;
+                } else {
+                    prevReps = lastSet.querySelector('.set-reps').value;
+                    prevWeight = lastSet.querySelector('.set-weight').value;
+                }
+            }
+        }
+
         const setItem = document.createElement('div');
         setItem.className = 'set-item';
         setItem.dataset.setNumber = setNumber;
@@ -119,16 +134,16 @@ const ActiveWorkoutSession = {
         let inputsHtml = '';
         if (isCardio) {
             inputsHtml = `
-                <input type="number" class="form-input set-time" placeholder="Min" min="1" required>
+                <input type="number" class="form-input set-time" placeholder="Min" min="1" required value="${prevTime}">
                 <span class="set-separator">min</span>
-                <input type="number" class="form-input set-distance" placeholder="Km" step="0.01" required>
+                <input type="number" class="form-input set-distance" placeholder="Km" step="0.01" required value="${prevDistance}">
                 <span class="set-separator">km</span>
             `;
         } else {
             inputsHtml = `
-                <input type="number" class="form-input set-reps" placeholder="Reps" min="1" required>
+                <input type="number" class="form-input set-reps" placeholder="Reps" min="1" required value="${prevReps}">
                 <span class="set-separator">×</span>
-                <input type="number" class="form-input set-weight" placeholder="kg" step="0.5" required>
+                <input type="number" class="form-input set-weight" placeholder="kg" step="0.5" required value="${prevWeight}">
             `;
         }
 
