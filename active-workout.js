@@ -9,6 +9,7 @@ const ActiveWorkoutSession = {
     timerInterval: null,
     exercises: [],
     currentExercise: null,
+    editingIndex: null,
 
     start(name) {
         this.isActive = true;
@@ -71,7 +72,13 @@ const ActiveWorkoutSession = {
 
     openAddExerciseModal(exerciseName, category, images = [], exerciseType = 'strength') {
         this.currentExercise = { name: exerciseName, category: category, type: exerciseType, sets: [] };
-        document.getElementById('activeExerciseTitle').textContent = exerciseName;
+
+        const modalTitle = document.getElementById('activeExerciseTitle');
+        if (this.editingIndex !== null) {
+            modalTitle.textContent = `Editar: ${exerciseName}`;
+        } else {
+            modalTitle.textContent = exerciseName;
+        }
 
         // Inject images
         const modalBody = document.querySelector('#addExerciseActiveModal .modal-body');
@@ -98,13 +105,30 @@ const ActiveWorkoutSession = {
         // Clear previous sets
         document.getElementById('activeSetsList').innerHTML = '';
 
-        // Add one set by default
-        this.addSet();
+        // If editing, load existing sets
+        if (this.editingIndex !== null) {
+            const existingExercise = this.exercises[this.editingIndex];
+            existingExercise.sets.forEach(() => this.addSet());
+            const setItems = document.querySelectorAll('#activeSetsList .set-item');
+            setItems.forEach((setItem, index) => {
+                const set = existingExercise.sets[index];
+                if (exerciseType === 'cardio') {
+                    setItem.querySelector('.set-time').value = set.time || '';
+                    setItem.querySelector('.set-distance').value = set.distance || '';
+                } else {
+                    setItem.querySelector('.set-reps').value = set.reps || '';
+                    setItem.querySelector('.set-weight').value = set.weight || '';
+                }
+            });
+        } else {
+            this.addSet();
+        }
     },
 
     closeAddExerciseModal() {
         document.getElementById('addExerciseActiveModal').classList.remove('active');
         this.currentExercise = null;
+        this.editingIndex = null;
     },
 
     addSet() {
@@ -216,11 +240,17 @@ const ActiveWorkoutSession = {
         }
 
         this.currentExercise.sets = sets;
-        this.exercises.push({ ...this.currentExercise });
+
+        if (this.editingIndex !== null) {
+            this.exercises[this.editingIndex] = { ...this.currentExercise };
+            showToast(`${this.currentExercise.name} actualizado`, 'success');
+        } else {
+            this.exercises.push({ ...this.currentExercise });
+            showToast(`${this.currentExercise.name} añadido`, 'success');
+        }
 
         this.closeAddExerciseModal();
         this.renderExercises();
-        showToast(`${this.currentExercise.name} añadido`, 'success');
     },
 
     renderExercises() {
@@ -246,12 +276,17 @@ const ActiveWorkoutSession = {
             <div class="active-exercise-card">
                 <div class="active-exercise-header">
                     <div class="active-exercise-name">${exercise.name}</div>
-                    <button class="remove-exercise-btn-small" onclick="ActiveWorkoutSession.removeExercise(${index})" title="Eliminar">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <line x1="18" y1="6" x2="6" y2="18"></line>
-                            <line x1="6" y1="6" x2="18" y2="18"></line>
-                        </svg>
-                    </button>
+                    <div class="active-exercise-buttons">
+                        <button type="button" class="edit-exercise-btn-small" onclick="ActiveWorkoutSession.editExercise(${index})" title="Editar">
+                            ✏️
+                        </button>
+                        <button type="button" class="remove-exercise-btn-small" onclick="ActiveWorkoutSession.removeExercise(${index})" title="Eliminar">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="18" y1="6" x2="6" y2="18"></line>
+                                <line x1="6" y1="6" x2="18" y2="18"></line>
+                            </svg>
+                        </button>
+                    </div>
                 </div>
                 <div class="active-exercise-sets">
                     ${exercise.sets.map((set, setIndex) => {
@@ -273,6 +308,14 @@ const ActiveWorkoutSession = {
             this.renderExercises();
             showToast('Ejercicio eliminado', 'success');
         }
+    },
+
+    editExercise(index) {
+        const exercise = this.exercises[index];
+        if (!exercise) return;
+
+        this.editingIndex = index;
+        this.openAddExerciseModal(exercise.name, exercise.category, [], exercise.type || 'strength');
     },
 
     finish() {

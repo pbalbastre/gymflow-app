@@ -1626,9 +1626,46 @@ textarea.form-input {
     font-family: var(--font-display);
 }
 
+.active-exercise-buttons {
+    display: flex;
+    gap: var(--spacing-xs);
+    align-items: center;
+}
+
+.edit-exercise-btn-small {
+    width: 32px;
+    height: 32px;
+    border-radius: var(--radius-md);
+    background: rgba(102, 126, 234, 0.15);
+    border: 1px solid rgba(102, 126, 234, 0.3);
+    color: var(--color-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    flex-shrink: 0;
+    font-size: 16px;
+    line-height: 1;
+}
+
+.edit-exercise-btn-small svg {
+    width: 16px;
+    height: 16px;
+}
+
+.edit-exercise-btn-small:hover {
+    background: rgba(102, 126, 234, 0.2);
+}
+
+.edit-exercise-btn-small:active {
+    transform: scale(0.95);
+    background: rgba(102, 126, 234, 0.25);
+}
+
 .remove-exercise-btn-small {
-    width: 28px;
-    height: 28px;
+    width: 32px;
+    height: 32px;
     border-radius: var(--radius-md);
     background: rgba(239, 68, 68, 0.1);
     border: 1px solid rgba(239, 68, 68, 0.2);
@@ -1638,11 +1675,12 @@ textarea.form-input {
     justify-content: center;
     cursor: pointer;
     transition: all var(--transition-fast);
+    flex-shrink: 0;
 }
 
 .remove-exercise-btn-small svg {
-    width: 14px;
-    height: 14px;
+    width: 16px;
+    height: 16px;
 }
 
 .remove-exercise-btn-small:active {
