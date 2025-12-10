@@ -2,7 +2,7 @@
 // STATE MANAGEMENT
 // ==========================================
 
-const AppState = {
+window.AppState = {
     workouts: [],
     currentView: 'home',
     currentFilter: 'all',
@@ -15,7 +15,7 @@ const AppState = {
 // STORAGE UTILS
 // ==========================================
 
-const Storage = {
+window.Storage = {
     save() {
         localStorage.setItem('gymflow_workouts', JSON.stringify(AppState.workouts));
     },
@@ -168,8 +168,10 @@ function closeAddWorkoutModal() {
 }
 
 function resetWorkoutForm() {
-    document.getElementById('workoutForm').reset();
-    document.getElementById('exercisesList').innerHTML = '';
+    const form = document.getElementById('startWorkoutForm');
+    if (form) form.reset();
+    const exercisesList = document.getElementById('exercisesList');
+    if (exercisesList) exercisesList.innerHTML = '';
     currentExerciseCount = 0;
 }
 

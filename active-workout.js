@@ -16,7 +16,10 @@ const ActiveWorkoutSession = {
         this.workoutName = name;
         this.startTime = new Date();
         this.exercises = [];
+        this.currentExercise = null;
+        this.editingIndex = null;
         this.showOverlay();
+        this.renderExercises(); // Render empty state
         this.startTimer();
         showToast(`¡Entrenamiento "${name}" iniciado!`, 'success');
     },
@@ -70,6 +73,25 @@ const ActiveWorkoutSession = {
         ExerciseSelector.openForActive();
     },
 
+    getLastExerciseData(exerciseName) {
+        // Search workout history for the last time this exercise was performed
+        if (!window.AppState || !window.AppState.workouts) return null;
+
+        for (let i = 0; i < window.AppState.workouts.length; i++) {
+            const workout = window.AppState.workouts[i];
+            if (!workout.exercises) continue;
+
+            const exercise = workout.exercises.find(ex => ex.name === exerciseName);
+
+            if (exercise && exercise.sets && exercise.sets.length > 0) {
+                // Return the LAST set from that exercise
+                return exercise.sets[exercise.sets.length - 1];
+            }
+        }
+
+        return null;
+    },
+
     openAddExerciseModal(exerciseName, category, images = [], exerciseType = 'strength') {
         this.currentExercise = { name: exerciseName, category: category, type: exerciseType, sets: [] };
 
@@ -121,7 +143,48 @@ const ActiveWorkoutSession = {
                 }
             });
         } else {
+            // Adding new exercise - get historical data
+            const historicalData = this.getLastExerciseData(exerciseName);
+
             this.addSet();
+
+            // Pre-fill first set with historical data if available
+            if (historicalData) {
+                // Wait a bit for DOM to update
+                requestAnimationFrame(() => {
+                    const firstSetInputs = document.querySelector('#activeSetsList .set-item');
+
+                    if (firstSetInputs) {
+                        if (exerciseType === 'cardio') {
+                            if (historicalData.time) {
+                                const timeInput = firstSetInputs.querySelector('.set-time');
+                                if (timeInput) {
+                                    timeInput.value = historicalData.time;
+                                }
+                            }
+                            if (historicalData.distance) {
+                                const distanceInput = firstSetInputs.querySelector('.set-distance');
+                                if (distanceInput) {
+                                    distanceInput.value = historicalData.distance;
+                                }
+                            }
+                        } else {
+                            if (historicalData.reps) {
+                                const repsInput = firstSetInputs.querySelector('.set-reps');
+                                if (repsInput) {
+                                    repsInput.value = historicalData.reps;
+                                }
+                            }
+                            if (historicalData.weight) {
+                                const weightInput = firstSetInputs.querySelector('.set-weight');
+                                if (weightInput) {
+                                    weightInput.value = historicalData.weight;
+                                }
+                            }
+                        }
+                    }
+                });
+            }
         }
     },
 
@@ -362,6 +425,7 @@ const ActiveWorkoutSession = {
         this.startTime = null;
         this.exercises = [];
         this.currentExercise = null;
+        this.editingIndex = null;
 
         this.hideOverlay();
         updateUI();
