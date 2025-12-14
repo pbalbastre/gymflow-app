@@ -306,9 +306,19 @@ function saveEditedWorkout(e) {
 // UI RENDERING
 // ==========================================
 
+// Force update check
+if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.getRegistrations().then(function (registrations) {
+        for (let registration of registrations) {
+            registration.update();
+        }
+    });
+}
+
 function renderHome() {
     // Update greeting
     document.getElementById('greetingText').textContent = getGreeting();
+
 
     // Calculate stats
     const now = new Date();

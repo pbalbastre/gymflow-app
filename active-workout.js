@@ -11,6 +11,55 @@ const ActiveWorkoutSession = {
     currentExercise: null,
     editingIndex: null,
 
+    saveSession() {
+        if (!this.isActive) return;
+        try {
+            const sessionData = {
+                isActive: this.isActive,
+                workoutName: this.workoutName,
+                startTime: this.startTime ? this.startTime.toISOString() : null,
+                exercises: this.exercises
+            };
+            localStorage.setItem('gymflow_active_session', JSON.stringify(sessionData));
+        } catch (e) {
+            console.warn('Error saving session (persistence disabled):', e);
+        }
+    },
+
+    loadSession() {
+        const data = localStorage.getItem('gymflow_active_session');
+        if (!data) return false;
+
+        try {
+            const session = JSON.parse(data);
+            if (session.isActive) {
+                this.isActive = true;
+                this.workoutName = session.workoutName;
+                this.startTime = session.startTime ? new Date(session.startTime) : new Date();
+                this.exercises = session.exercises || [];
+
+                // Restore UI
+                this.showOverlay();
+                this.renderExercises();
+                this.startTimer();
+                console.log('Session restored:', this.workoutName);
+                return true;
+            }
+        } catch (e) {
+            console.error('Error restoring session:', e);
+            this.clearSession();
+        }
+        return false;
+    },
+
+    clearSession() {
+        try {
+            localStorage.removeItem('gymflow_active_session');
+        } catch (e) {
+            console.warn('Error clearing session:', e);
+        }
+    },
+
     start(name) {
         this.isActive = true;
         this.workoutName = name;
@@ -18,6 +67,7 @@ const ActiveWorkoutSession = {
         this.exercises = [];
         this.currentExercise = null;
         this.editingIndex = null;
+        this.saveSession(); // Save initial state
         this.showOverlay();
         this.renderExercises(); // Render empty state
         this.startTimer();
@@ -28,6 +78,11 @@ const ActiveWorkoutSession = {
         document.getElementById('activeWorkoutOverlay').classList.add('active');
         document.getElementById('activeWorkoutTitle').textContent = this.workoutName;
         document.getElementById('navBar').style.display = 'none';
+
+        // Ensure the timer is updating immediately
+        if (this.startTime) {
+            this.updateTimerDisplay();
+        }
     },
 
     hideOverlay() {
@@ -37,6 +92,7 @@ const ActiveWorkoutSession = {
 
     startTimer() {
         this.updateTimerDisplay();
+        if (this.timerInterval) clearInterval(this.timerInterval);
         this.timerInterval = setInterval(() => {
             this.updateTimerDisplay();
         }, 1000);
@@ -60,7 +116,8 @@ const ActiveWorkoutSession = {
         const seconds = elapsed % 60;
 
         const display = `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
-        document.getElementById('activeWorkoutTimer').textContent = display;
+        const timerElement = document.getElementById('activeWorkoutTimer');
+        if (timerElement) timerElement.textContent = display;
     },
 
     getElapsedMinutes() {
@@ -312,6 +369,7 @@ const ActiveWorkoutSession = {
             showToast(`${this.currentExercise.name} añadido`, 'success');
         }
 
+        this.saveSession(); // Save after modifying exercises
         this.closeAddExerciseModal();
         this.renderExercises();
     },
@@ -368,6 +426,7 @@ const ActiveWorkoutSession = {
     removeExercise(index) {
         if (confirm('¿Eliminar este ejercicio?')) {
             this.exercises.splice(index, 1);
+            this.saveSession(); // Save after removal
             this.renderExercises();
             showToast('Ejercicio eliminado', 'success');
         }
@@ -417,6 +476,9 @@ const ActiveWorkoutSession = {
         // Save workout
         AppState.workouts.unshift(workout);
         Storage.save();
+
+        // Clear active session persistence
+        this.clearSession();
 
         // Reset session
         this.stopTimer();
@@ -500,4 +562,10 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
+    // Attempt to restore active session
+    // We delay slightly to ensure AppState is ready if needed, although not strictly necessary for this.
+    setTimeout(() => {
+        ActiveWorkoutSession.loadSession();
+    }, 100);
 });

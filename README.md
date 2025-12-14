@@ -63,6 +63,10 @@ Luego abre tu navegador en `http://localhost:8000`
 - **Tipografía moderna** (Inter + Outfit de Google Fonts)
 - **Optimizado para iPhone 16** con soporte para safe areas
 
+## Se usa un subconjunto de la Bbase de datos de ejercicios de:
+https://github.com/wrkout/exercises.json
+autor: @olliejennings
+
 ## Estructura del Proyecto
 
 ```
